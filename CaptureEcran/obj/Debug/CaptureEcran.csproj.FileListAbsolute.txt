@@ -1,0 +1,9 @@
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\CaptureEcran\bin\Debug\CaptureEcran.exe
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\CaptureEcran\bin\Debug\CaptureEcran.pdb
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\CaptureEcran\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\CaptureEcran\obj\Debug\CaptureEcran.FormWindowScreen.resources
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\CaptureEcran\obj\Debug\CaptureEcran.Properties.Resources.resources
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\CaptureEcran\obj\Debug\CaptureEcran.csproj.GenerateResource.Cache
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\CaptureEcran\obj\Debug\CaptureEcran.exe
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\CaptureEcran\obj\Debug\CaptureEcran.pdb
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\CaptureEcran\obj\Debug\CaptureEcran.FormControlePrintScreen.resources

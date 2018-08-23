@@ -1,0 +1,55 @@
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\IHM\bin\Debug\IHM.exe
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\IHM\bin\Debug\IHM.pdb
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\IHM\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\IHM\obj\Debug\IHM.Properties.Resources.resources
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\IHM\obj\Debug\IHM.csproj.GenerateResource.Cache
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\IHM\obj\Debug\IHM.exe
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\IHM\obj\Debug\IHM.pdb
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\IHM\bin\Debug\BAL.dll
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\IHM\bin\Debug\BEL.dll
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\IHM\bin\Debug\DAL.dll
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\IHM\bin\Debug\BAL.pdb
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\IHM\bin\Debug\DAL.pdb
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\IHM\bin\Debug\BEL.pdb
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\IHM\obj\Debug\IHM.Testing.resources
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\IHM\obj\Debug\IHM.FenCrudCritGen.resources
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\IHM\obj\Debug\IHM.FenCrudIoPhysiqueGen.resources
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\IHM\obj\Debug\IHM.MainForm.resources
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\IHM\obj\Debug\IHM.FenCrudProjet.resources
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\IHM\obj\Debug\IHM.FenCrudFctGen.resources
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\IHM\obj\Debug\IHM.FenCrudPersonnel.resources
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\IHM\obj\Debug\IHM.FenCrudFctElectronique.resources
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\IHM\bin\Debug\OutilCapture.exe
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\IHM\bin\Debug\OutilCapture.pdb
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\IHM\obj\Debug\IHM.FenListeAttente.resources
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\obj\Debug\IHM.exe
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\obj\Debug\IHM.pdb
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\obj\Debug\IHM.FenCrudFctElect.resources
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\obj\Debug\IHM.FenCrudPersonnel.resources
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\obj\Debug\IHM.FenCrudProjet.resources
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\obj\Debug\IHM.FenCrudCritGen.resources
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\obj\Debug\IHM.FenCrudFctGen.resources
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\obj\Debug\IHM.FenCrudIoPhysiqueGen.resources
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\obj\Debug\IHM.FenListeAttente.resources
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\obj\Debug\IHM.MainForm.resources
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\obj\Debug\IHM.Testing.resources
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\obj\Debug\IHM.Properties.Resources.resources
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\obj\Debug\IHM.csproj.GenerateResource.Cache
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\bin\Debug\IHM.exe
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\bin\Debug\IHM.pdb
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\bin\Debug\BAL.dll
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\bin\Debug\BEL.dll
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\bin\Debug\DAL.dll
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\bin\Debug\BAL.pdb
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\bin\Debug\DAL.pdb
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\bin\Debug\BEL.pdb
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\obj\Debug\IHM.FenCrudCritAssocie.resources
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\bin\Debug\IHM.exe.config
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\bin\Debug\IHM.exe.manifest
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\bin\Debug\IHM.application
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\obj\Debug\IHM.exe.manifest
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\obj\Debug\IHM.application
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\obj\Debug\IHM.FenCrudIoPhysAssocie.resources
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\bin\Debug\CaptureEcran.exe
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\bin\Debug\CaptureEcran.pdb

@@ -1,0 +1,5 @@
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\BLL\bin\Debug\BLL.dll
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\BLL\bin\Debug\BLL.pdb
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\BLL\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\BLL\obj\Debug\BLL.dll
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\BLL\obj\Debug\BLL.pdb

@@ -1,0 +1,18 @@
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\BAL\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\BAL\bin\Debug\BAL.dll
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\BAL\bin\Debug\BAL.pdb
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\BAL\bin\Debug\BEL.dll
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\BAL\bin\Debug\DAL.dll
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\BAL\bin\Debug\DAL.pdb
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\BAL\bin\Debug\BEL.pdb
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\BAL\obj\Debug\BAL.dll
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\BAL\obj\Debug\BAL.pdb
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\BAL\bin\Debug\BAL.dll
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\BAL\bin\Debug\BAL.pdb
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\BAL\bin\Debug\BEL.dll
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\BAL\bin\Debug\DAL.dll
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\BAL\bin\Debug\DAL.pdb
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\BAL\bin\Debug\BEL.pdb
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\BAL\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\BAL\obj\Debug\BAL.dll
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\BAL\obj\Debug\BAL.pdb

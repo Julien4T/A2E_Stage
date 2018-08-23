@@ -1,0 +1,10 @@
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\BEL\bin\Release\BEL.dll
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\BEL\bin\Release\BEL.pdb
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\BEL\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\BEL\obj\Release\BEL.dll
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\BEL\obj\Release\BEL.pdb
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\BEL\bin\Release\BEL.dll
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\BEL\bin\Release\BEL.pdb
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\BEL\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\BEL\obj\Release\BEL.dll
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\BEL\obj\Release\BEL.pdb

@@ -1,0 +1,18 @@
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\BAL\bin\Release\BAL.dll
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\BAL\bin\Release\BAL.pdb
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\BAL\bin\Release\BEL.dll
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\BAL\bin\Release\DAL.dll
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\BAL\bin\Release\DAL.pdb
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\BAL\bin\Release\BEL.pdb
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\BAL\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\BAL\obj\Release\BAL.dll
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\BAL\obj\Release\BAL.pdb
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\BAL\bin\Release\BAL.dll
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\BAL\bin\Release\BAL.pdb
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\BAL\bin\Release\BEL.dll
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\BAL\bin\Release\DAL.dll
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\BAL\bin\Release\DAL.pdb
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\BAL\bin\Release\BEL.pdb
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\BAL\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\BAL\obj\Release\BAL.dll
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\BAL\obj\Release\BAL.pdb

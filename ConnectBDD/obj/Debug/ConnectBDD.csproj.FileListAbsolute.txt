@@ -1,0 +1,9 @@
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\ConnectBDD\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\ConnectBDD\obj\Debug\ConnectBDD.Form1.resources
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\ConnectBDD\obj\Debug\ConnectBDD.Properties.Resources.resources
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\ConnectBDD\obj\Debug\ConnectBDD.csproj.GenerateResource.Cache
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\ConnectBDD\bin\Debug\ConnectBDD.exe
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\ConnectBDD\bin\Debug\ConnectBDD.pdb
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\ConnectBDD\obj\Debug\ConnectBDD.exe
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\ConnectBDD\obj\Debug\ConnectBDD.pdb
+C:\Users\Etudesportable\Documents\Visual Studio 2008\Projects\TestConnectionBdd\ConnectBDD\ConnectBDD\obj\Debug\ConnectBDD.Form2.resources

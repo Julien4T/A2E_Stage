@@ -1,0 +1,28 @@
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\CaptureEcran\bin\Release\CaptureEcran.exe
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\CaptureEcran\bin\Release\CaptureEcran.pdb
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\CaptureEcran\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\CaptureEcran\obj\Release\CaptureEcran.FormControlePrintScreen.resources
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\CaptureEcran\obj\Release\CaptureEcran.FormWindowScreen.resources
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\CaptureEcran\obj\Release\CaptureEcran.Properties.Resources.resources
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\CaptureEcran\obj\Release\CaptureEcran.csproj.GenerateResource.Cache
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\CaptureEcran\obj\Release\CaptureEcran.exe
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\CaptureEcran\obj\Release\CaptureEcran.pdb
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\CaptureEcran\bin\Release\CaptureEcran.exe.manifest
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\CaptureEcran\bin\Release\CaptureEcran.application
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\CaptureEcran\obj\Release\CaptureEcran.TrustInfo.xml
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\CaptureEcran\obj\Release\CaptureEcran.exe.manifest
+C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\CaptureEcran\obj\Release\CaptureEcran.application
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\CaptureEcran\bin\Release\CaptureEcran.exe.manifest
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\CaptureEcran\bin\Release\CaptureEcran.application
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\CaptureEcran\bin\Release\CaptureEcran.exe
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\CaptureEcran\bin\Release\CaptureEcran.pdb
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\CaptureEcran\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\CaptureEcran\obj\Release\CaptureEcran.FormControlePrintScreen.resources
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\CaptureEcran\obj\Release\CaptureEcran.FormWindowScreen.resources
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\CaptureEcran\obj\Release\CaptureEcran.Properties.Resources.resources
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\CaptureEcran\obj\Release\CaptureEcran.csproj.GenerateResource.Cache
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\CaptureEcran\obj\Release\CaptureEcran.TrustInfo.xml
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\CaptureEcran\obj\Release\CaptureEcran.exe.manifest
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\CaptureEcran\obj\Release\CaptureEcran.application
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\CaptureEcran\obj\Release\CaptureEcran.exe
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\CaptureEcran\obj\Release\CaptureEcran.pdb
