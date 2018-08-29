@@ -178,7 +178,7 @@ namespace DAL
 
             DbCommand cmd = db.CreerCommande();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "call filtrerPremier (" + f.fonction.idFonction + ", "
+            cmd.CommandText = "call filtrerPremier (" + Math.Abs(f.fonction.idFonction) + ", "
                 + f.tensionInMin.ToString().Replace(",", ".") + ", " + f.tensionInMax.ToString().Replace(",", ".") + ", "
                 + f.intensiteInMin.ToString().Replace(",", ".") + ", " + f.intensiteInMax.ToString().Replace(",", ".") + ", "
                 + f.tensionOutMin.ToString().Replace(",", ".") + ", " + f.tensionOutMax.ToString().Replace(",", ".") + ", "
@@ -200,7 +200,16 @@ namespace DAL
                 + f.critRecherche[4].valeur.ToString().Replace(",", ".") + ", "                
                  + ((f.critRecherche[5].crit != null) ? f.critRecherche[5].crit.idCritere : CritereRecherche.valeurParDefisNull) + ", " 
                 + ((f.critRecherche[5].signe != null) ? f.critRecherche[5].signe.valeur : CritereRecherche.valeurParDefisNull) + ", "
-                + f.critRecherche[5].valeur.ToString().Replace(",", ".") + " "  
+                + f.critRecherche[5].valeur.ToString().Replace(",", ".") + ", "
+                + ((f.ioRecherche[0].io != null) ? f.ioRecherche[0].io.idIophysique : CritereRecherche.valeurParDefisNull) + ", "
+                + ((f.ioRecherche[0].signe != null) ? f.ioRecherche[0].signe.valeur : CritereRecherche.valeurParDefisNull) + ", "
+                + f.ioRecherche[0].valeur.ToString().Replace(",", ".") + ", "
+                 + ((f.ioRecherche[1].io != null) ? f.ioRecherche[1].io.idIophysique : CritereRecherche.valeurParDefisNull) + ", "
+                + ((f.ioRecherche[1].signe != null) ? f.ioRecherche[1].signe.valeur : CritereRecherche.valeurParDefisNull) + ", "
+                + f.ioRecherche[1].valeur.ToString().Replace(",", ".") + ", "
+                 + ((f.ioRecherche[1].io != null) ? f.ioRecherche[1].io.idIophysique : CritereRecherche.valeurParDefisNull) + ", "
+                + ((f.ioRecherche[1].signe != null) ? f.ioRecherche[1].signe.valeur : CritereRecherche.valeurParDefisNull) + ", "
+                + f.ioRecherche[1].valeur.ToString().Replace(",", ".") + " "
                 + ") ";
 
 

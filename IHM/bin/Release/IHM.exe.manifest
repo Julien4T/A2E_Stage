@@ -60,7 +60,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>KYMfPIe6fOdFC+ko0VEkO21RZJY=</dsig:DigestValue>
+        <dsig:DigestValue>lB1aS3E+j0V5O+loZKrDxTVTVC4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -72,7 +72,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ULObrLTUrTQsaN3PqrZCveq9euY=</dsig:DigestValue>
+        <dsig:DigestValue>GRI/oZ9DkUsi30wbrsejaGjJ+GA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -84,31 +84,31 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>HTMs0fzbcwxYaD934CE3+mFBbHA=</dsig:DigestValue>
+        <dsig:DigestValue>FOue8zox1UrH1n/vRTErj87TOlo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DAL.dll" size="30208">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DAL.dll" size="30720">
       <assemblyIdentity name="DAL" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>4+LZwelpCZ+ngndlthOVJvh1h1E=</dsig:DigestValue>
+        <dsig:DigestValue>GcGreT7ATccXV671LzmWfv6KaDk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IHM.exe" size="695808">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IHM.exe" size="732160">
       <assemblyIdentity name="IHM" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>7kZJ/uHBOyRiWiA1wFgOeJw62Bk=</dsig:DigestValue>
+        <dsig:DigestValue>XjA2yFQcwxbXlyFzQ7gwmZHnYMk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

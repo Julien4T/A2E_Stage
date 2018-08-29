@@ -27,7 +27,7 @@ namespace IHM
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            ihmM.raffraichirCombobox(IhmManager.metier.FonctionGen,comboBox2, comboBox3);
+     
             ihmM.raffraichirCombobox(IhmManager.metier.CritGen,this.comboBox4);
             ihmM.raffraichirCombobox(IhmManager.metier.IoPhysGen,this.comboBox5);
             ihmM.raffraichirCombobox(IhmManager.metier.Projet,this.comboBox6);
@@ -91,7 +91,7 @@ namespace IHM
         private void AjouterFctGen_Click(object sender, EventArgs e)
         {
             ihmM.ajouterObj(IhmManager.metier.FonctionGen);
-            ihmM.raffraichirCombobox(IhmManager.metier.FonctionGen, this.comboBox2, this.comboBox3);          
+          
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -106,7 +106,7 @@ namespace IHM
             {
                 //do something
                 this.fgm.supprimerFctGen(IhmManager.fctGenSelect);
-                ihmM.raffraichirCombobox(IhmManager.metier.FonctionGen, this.comboBox2, this.comboBox3);            
+                
               
             }
             else if (dialogResult == DialogResult.No)
@@ -118,7 +118,7 @@ namespace IHM
         private void button8_Click(object sender, EventArgs e)
         {
             ihmM.modifierObj(IhmManager.metier.FonctionGen, comboBox3.SelectedValue);
-            ihmM.raffraichirCombobox(IhmManager.metier.FonctionGen, this.comboBox2, this.comboBox3);
+     
         }
 
         private void button11_Click(object sender, EventArgs e)

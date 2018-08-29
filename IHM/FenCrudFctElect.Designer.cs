@@ -577,7 +577,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(43, 20);
             this.textBox3.TabIndex = 6;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // textBox4
@@ -1402,16 +1401,17 @@
             this.buttonValider});
             this.toolStripMain.Location = new System.Drawing.Point(3, 0);
             this.toolStripMain.Name = "toolStripMain";
-            this.toolStripMain.Size = new System.Drawing.Size(363, 32);
+            this.toolStripMain.Size = new System.Drawing.Size(378, 32);
             this.toolStripMain.TabIndex = 0;
             // 
             // buttonOpen
             // 
-            this.buttonOpen.Image = global::IHM.Properties.Resources.open;
+            this.buttonOpen.Image = global::IHM.Properties.Resources.new2;
             this.buttonOpen.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.buttonOpen.Name = "buttonOpen";
-            this.buttonOpen.Size = new System.Drawing.Size(69, 29);
-            this.buttonOpen.Text = "Ouvrir";
+            this.buttonOpen.Size = new System.Drawing.Size(84, 29);
+            this.buttonOpen.Text = "Nouveau";
+            this.buttonOpen.Click += new System.EventHandler(this.buttonOpen_Click);
             // 
             // toolStripSeparator1
             // 

@@ -69,21 +69,36 @@ namespace IHM
         /*raffraichir les données des comboboxs en cascade pour la liste des fonctions génériques 
         (rubrique pour une et désignation en fonction de la rubrique pour l'autre)
         */
-        public void raffraichirCombobox(metier m, ComboBox cb1, ComboBox cb2)
+        public void raffraichirCombobox(ComboBox cb1, ComboBox cb2, Boolean visu)
         {
-            if (m == metier.FonctionGen)
-            {                
-                    IhmManager.listFctGen = this.fctGenManager.getListFonctionGen();
-                    cb1.DataSource = IhmManager.listFctGen
-                                .OrderBy(r => r.rubrique)
-                                .GroupBy(r => r.rubrique)
-                                .Select(ru => ru.Key)                                
-                                .ToList(); ;
-                    cb2.DataSource = IhmManager.listFctGen
-                                .OrderBy(d => d.designation)
-                                .Where(r => r.rubrique == cb1.SelectedValue.ToString())
-                                .ToList();
-            } 
+             IhmManager.listFctGen = this.fctGenManager.getListFonctionGen();
+            switch (visu)
+            { 
+                case true :
+                        IhmManager.listFctGen = this.fctGenManager.getListFonctionGen();
+                        cb1.DataSource = IhmManager.listFctGen
+                                    .OrderBy(r => r.rubrique)                                  
+                                    .GroupBy(r => r.rubrique)
+                                    .Select(ru => ru.Key)
+                                    .ToList();
+                    
+                    break;
+                case false:                    
+                        cb1.DataSource = IhmManager.listFctGen
+                                    .OrderBy(r => r.rubrique)
+                                    .Where(i => i.idFonction != -9999)
+                                    .GroupBy(r => r.rubrique)                                      
+                                    .Select(ru => ru.Key)
+                                    .ToList();
+                    break;
+            }
+            cb2.DataSource = IhmManager.listFctGen
+                                    .OrderBy(d => d.designation)
+                                    .Where(r => r.rubrique == cb1.SelectedValue.ToString())
+                                    .ToList();
+
+
+          
         }
         public void raffraichirCombobox(metier m , ComboBox cb) 
         {

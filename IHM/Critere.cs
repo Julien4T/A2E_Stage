@@ -164,7 +164,16 @@ namespace IHM
         }
         private void texBoxCrit_KeyPress(object sender, KeyPressEventArgs e)
         {
-            this.ihmM.texteBoxFloatConstraint(this.texBoxCrit, e);
+            switch (this.tfi)
+            {
+                case IhmManager.typeFiltre.critere:
+                    this.ihmM.texteBoxFloatConstraint(this.texBoxCrit, e);
+                    break;
+                case IhmManager.typeFiltre.iophys:
+                    this.ihmM.texteBoxIntConstraint(this.texBoxCrit, e);
+                    break;
+            }    
+          
         }
 
 
@@ -187,8 +196,6 @@ namespace IHM
                     break;
             }    
         }
-
-
 
         public CritereRecherche getCritere() 
         {

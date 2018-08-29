@@ -33,11 +33,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nouveauProjetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ouvrirUneFonctionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajouterFonctionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajouterIOPhysiqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.Chargement = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -69,7 +65,7 @@
             this.toolStripButtonRefresh = new System.Windows.Forms.ToolStripButton();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBoxDataOutput = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanelDataOutput = new System.Windows.Forms.TableLayoutPanel();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -193,7 +189,7 @@
             this.toolStrip2.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
             this.groupBoxDataOutput.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanelDataOutput.SuspendLayout();
             this.groupBoxDataInput.SuspendLayout();
             this.tableLayoutPanelDataInput.SuspendLayout();
             this.groupBoxCritere.SuspendLayout();
@@ -260,8 +256,7 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fichierToolStripMenuItem,
-            this.optionsToolStripMenuItem});
+            this.fichierToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1484, 24);
@@ -272,7 +267,6 @@
             // 
             this.fichierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nouveauProjetToolStripMenuItem,
-            this.ouvrirUneFonctionToolStripMenuItem,
             this.quitterToolStripMenuItem});
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
             this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
@@ -281,41 +275,16 @@
             // nouveauProjetToolStripMenuItem
             // 
             this.nouveauProjetToolStripMenuItem.Name = "nouveauProjetToolStripMenuItem";
-            this.nouveauProjetToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.nouveauProjetToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.nouveauProjetToolStripMenuItem.Text = "Nouvelle fonction";
-            // 
-            // ouvrirUneFonctionToolStripMenuItem
-            // 
-            this.ouvrirUneFonctionToolStripMenuItem.Name = "ouvrirUneFonctionToolStripMenuItem";
-            this.ouvrirUneFonctionToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
-            this.ouvrirUneFonctionToolStripMenuItem.Text = "Ouvrir une fonction";
+            this.nouveauProjetToolStripMenuItem.Click += new System.EventHandler(this.nouveauProjetToolStripMenuItem_Click);
             // 
             // quitterToolStripMenuItem
             // 
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.quitterToolStripMenuItem.Text = "Quitter";
-            // 
-            // optionsToolStripMenuItem
-            // 
-            this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ajouterFonctionsToolStripMenuItem,
-            this.ajouterIOPhysiqueToolStripMenuItem});
-            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.optionsToolStripMenuItem.Text = "Options";
-            // 
-            // ajouterFonctionsToolStripMenuItem
-            // 
-            this.ajouterFonctionsToolStripMenuItem.Name = "ajouterFonctionsToolStripMenuItem";
-            this.ajouterFonctionsToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
-            this.ajouterFonctionsToolStripMenuItem.Text = "Ajouter Fonctions";
-            // 
-            // ajouterIOPhysiqueToolStripMenuItem
-            // 
-            this.ajouterIOPhysiqueToolStripMenuItem.Name = "ajouterIOPhysiqueToolStripMenuItem";
-            this.ajouterIOPhysiqueToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
-            this.ajouterIOPhysiqueToolStripMenuItem.Text = "Ajouter IO Physiques";
+            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -669,7 +638,7 @@
             // 
             // groupBoxDataOutput
             // 
-            this.groupBoxDataOutput.Controls.Add(this.tableLayoutPanel2);
+            this.groupBoxDataOutput.Controls.Add(this.tableLayoutPanelDataOutput);
             this.groupBoxDataOutput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxDataOutput.Location = new System.Drawing.Point(3, 92);
             this.groupBoxDataOutput.Name = "groupBoxDataOutput";
@@ -678,32 +647,32 @@
             this.groupBoxDataOutput.TabStop = false;
             this.groupBoxDataOutput.Text = "Données en sortie";
             // 
-            // tableLayoutPanel2
+            // tableLayoutPanelDataOutput
             // 
-            this.tableLayoutPanel2.ColumnCount = 4;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Controls.Add(this.label11, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.textBox6, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label12, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label13, 3, 2);
-            this.tableLayoutPanel2.Controls.Add(this.label14, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.label15, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label16, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.textBox5, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.textBox8, 2, 2);
-            this.tableLayoutPanel2.Controls.Add(this.textBox7, 1, 2);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 16);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(238, 64);
-            this.tableLayoutPanel2.TabIndex = 1;
+            this.tableLayoutPanelDataOutput.ColumnCount = 4;
+            this.tableLayoutPanelDataOutput.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanelDataOutput.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelDataOutput.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelDataOutput.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelDataOutput.Controls.Add(this.label11, 2, 1);
+            this.tableLayoutPanelDataOutput.Controls.Add(this.textBox6, 2, 0);
+            this.tableLayoutPanelDataOutput.Controls.Add(this.label12, 1, 1);
+            this.tableLayoutPanelDataOutput.Controls.Add(this.label13, 3, 2);
+            this.tableLayoutPanelDataOutput.Controls.Add(this.label14, 0, 2);
+            this.tableLayoutPanelDataOutput.Controls.Add(this.label15, 3, 0);
+            this.tableLayoutPanelDataOutput.Controls.Add(this.label16, 0, 0);
+            this.tableLayoutPanelDataOutput.Controls.Add(this.textBox5, 1, 0);
+            this.tableLayoutPanelDataOutput.Controls.Add(this.textBox8, 2, 2);
+            this.tableLayoutPanelDataOutput.Controls.Add(this.textBox7, 1, 2);
+            this.tableLayoutPanelDataOutput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanelDataOutput.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanelDataOutput.Name = "tableLayoutPanelDataOutput";
+            this.tableLayoutPanelDataOutput.RowCount = 3;
+            this.tableLayoutPanelDataOutput.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelDataOutput.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.tableLayoutPanelDataOutput.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelDataOutput.Size = new System.Drawing.Size(238, 64);
+            this.tableLayoutPanelDataOutput.TabIndex = 1;
             // 
             // label11
             // 
@@ -2073,8 +2042,8 @@
             this.toolStrip2.PerformLayout();
             this.tableLayoutPanel15.ResumeLayout(false);
             this.groupBoxDataOutput.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanelDataOutput.ResumeLayout(false);
+            this.tableLayoutPanelDataOutput.PerformLayout();
             this.groupBoxDataInput.ResumeLayout(false);
             this.tableLayoutPanelDataInput.ResumeLayout(false);
             this.tableLayoutPanelDataInput.PerformLayout();
@@ -2166,9 +2135,6 @@
         private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nouveauProjetToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ajouterFonctionsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ajouterIOPhysiqueToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel Chargement;
         private System.Windows.Forms.ToolStrip toolStrip1;
@@ -2261,7 +2227,7 @@
         private System.Windows.Forms.GroupBox groupBoxCritere;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelCrit;
         private System.Windows.Forms.Button buttonCrit1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelDataOutput;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
@@ -2310,6 +2276,5 @@
         private System.Windows.Forms.ToolStripButton ouvrirSvnProjet;
         private System.Windows.Forms.ToolStrip toolStrip6;
         private System.Windows.Forms.ToolStripButton ouvrirSvnFonction;
-        private System.Windows.Forms.ToolStripMenuItem ouvrirUneFonctionToolStripMenuItem;
     }
 }

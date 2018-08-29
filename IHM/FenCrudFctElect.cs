@@ -37,7 +37,7 @@ namespace IHM
         private void initialiserDonnees(state e) {
 
             ihmM.raffraichirCombobox(IhmManager.metier.Projet, comboBoxProjet);
-            ihmM.raffraichirCombobox(IhmManager.metier.FonctionGen, comboBoxRubrique, comboBoxFonction);
+            ihmM.raffraichirCombobox(comboBoxRubrique, comboBoxFonction, false);
             IhmManager.projetSelect = (Projet)comboBoxProjet.SelectedValue;
             this.fctElectronique = new FonctionElectronique();
 
@@ -261,6 +261,21 @@ namespace IHM
         #endregion
 
         #region Boutons main toolstrip
+
+        private void buttonOpen_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult;
+            dialogResult = MessageBox.Show("Voulez-vous sauvegarder les modifications avant d'ajouter une nouvelle fonction?",
+               "Nouveau", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.enregistrer(FenCrudFctElect.etat);
+            }
+
+            FenCrudFctElect.etat = state.ajouter;
+            this.initialiserDonnees(FenCrudFctElect.etat);
+        }
+
         private void buttonSave_Click(object sender, EventArgs e)
         {
             this.enregistrer(FenCrudFctElect.etat);
@@ -313,17 +328,17 @@ namespace IHM
         private void addFonction_Click(object sender, EventArgs e)
         {
             ihmM.ajouterObj(IhmManager.metier.FonctionGen);
-            ihmM.raffraichirCombobox(IhmManager.metier.FonctionGen, this.comboBoxRubrique, this.comboBoxFonction);
+            ihmM.raffraichirCombobox(this.comboBoxRubrique, this.comboBoxFonction, false);
         }
         private void updateFonction_Click(object sender, EventArgs e)
         {
             ihmM.modifierObj(IhmManager.metier.FonctionGen, this.comboBoxFonction.SelectedValue);
-            ihmM.raffraichirCombobox(IhmManager.metier.FonctionGen, this.comboBoxRubrique, this.comboBoxFonction);
+            ihmM.raffraichirCombobox(this.comboBoxRubrique, this.comboBoxFonction, false);
         }
         private void deleteFonction_Click(object sender, EventArgs e)
         {
             ihmM.supprimerObj(IhmManager.metier.FonctionGen, this.comboBoxFonction.SelectedValue);
-            ihmM.raffraichirCombobox(IhmManager.metier.FonctionGen, this.comboBoxRubrique, this.comboBoxFonction);
+            ihmM.raffraichirCombobox(this.comboBoxRubrique, this.comboBoxFonction, false);
 
         }
         private void comboBoxProjet_SelectedIndexChanged(object sender, EventArgs e)
@@ -512,12 +527,10 @@ namespace IHM
             
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
       
+     
        
 
        

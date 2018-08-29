@@ -51,7 +51,8 @@ namespace IHM
         private void FenCrudFctGen_Load(object sender, EventArgs e)
         {
             var rubrique = IhmManager.listFctGen
-                 .GroupBy(r => r.rubrique)
+                  .Where(i => i.idFonction !=-9999)
+                 .GroupBy(r => r.rubrique)               
                  .Select(ru => ru.Key)
                  .ToList();
             comboBox1.DataSource = rubrique;

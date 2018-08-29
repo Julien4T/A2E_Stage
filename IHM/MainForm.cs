@@ -67,7 +67,7 @@ namespace IHM
             this.treeViewFonction.Nodes.Clear();
 
 
-            if (idFonction == CritereRecherche.valeurParDefisNull)
+            if (Math.Abs(idFonction) == CritereRecherche.valeurParDefisNull)
             {
                 var projets = listFct.GroupBy(prj => prj.projet.idProjet)
                         .Select(p => p.Key)
@@ -81,7 +81,7 @@ namespace IHM
 
                     foreach (FonctionElectronique f in fonctions)
                     {
-                        TreeNode fonctionNode = new TreeNode(f.fonction.designation);
+                        TreeNode fonctionNode = new TreeNode(f.taux + "% - " + f.fonction.designation);
                         fonctionNode.Tag = f;
                         treeViewFonction.Nodes[i].Nodes.Add(fonctionNode);
                     }
@@ -285,9 +285,8 @@ namespace IHM
 
         #region Controle filtre
         private void chargerDonneesFiltre()
-        {
-            this.comboBoxRubrique.Items.Add("Tous");
-            this.ihmM.raffraichirCombobox(IhmManager.metier.FonctionGen, comboBoxRubrique, comboBoxFonction);
+        {      
+            this.ihmM.raffraichirCombobox(comboBoxRubrique, comboBoxFonction, true);
         }
         private void ajouterCrit(Button b, IhmManager.typeFiltre tf)
         {
@@ -459,7 +458,11 @@ namespace IHM
             foreach (TextBox tb in tableLayoutPanelDataInput.Controls.OfType<TextBox>()) 
             {
                 tb.Text="";
-            }    
+            }
+            foreach (TextBox tb in tableLayoutPanelDataOutput.Controls.OfType<TextBox>())
+            {
+                tb.Text = "";
+            }
         
         }
         private void toolStripButtonRefresh_Click(object sender, EventArgs e)
@@ -469,6 +472,22 @@ namespace IHM
 
 
         #endregion
+
+        private void nouveauProjetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FenCrudFctElect.etat = FenCrudFctElect.state.ajouter;
+            FenCrudFctElect formCrudElec = new FenCrudFctElect();
+            formCrudElec.ShowDialog();
+        }
+
+        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+      
+
+      
 
        
        
