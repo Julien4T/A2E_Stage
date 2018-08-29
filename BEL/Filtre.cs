@@ -4,9 +4,7 @@ using System.Linq;
 using System.Text;
 
 namespace BEL
-{
-    
-    
+{  
 
     public class Signe
     {
@@ -57,6 +55,38 @@ namespace BEL
         }
     }
 
+
+    public class IoRecherche
+    {
+        public IoPhysiqueGenerique io { get; set; }
+        public Signe signe { get; set; }
+        public int valeur { get; set; }
+       
+
+        public IoRecherche()
+        {
+            this.io = new IoPhysiqueGenerique();
+            this.signe = new Signe("", CritereRecherche.valeurParDefisNull);
+            this.io.idIophysique = CritereRecherche.valeurParDefisNull;
+            this.valeur = CritereRecherche.valeurParDefisNull;
+        }
+
+        public IoRecherche(IoPhysiqueGenerique c, Signe s, int v)
+        {
+            this.io = c;
+            this.signe = s;
+            this.valeur = v;
+        }
+        public override string ToString()
+        {
+            string chaineSortie = "";
+
+            chaineSortie += (this.valeur != CritereRecherche.valeurParDefisNull) ? this.io.designation + " " + this.signe.caractere + " " + this.valeur + " " : " ";
+
+            return chaineSortie;
+        }
+    }
+
     public class Filtre
     {
         public FonctionGenerique fonction { get; set; }
@@ -69,32 +99,56 @@ namespace BEL
         public float tensionOutMax { get; set; }
         public float intensiteOutMin { get; set; }
         public float intensiteOutMax { get; set; }
-        public CritereRecherche[] crit { get; set; }
+        public CritereRecherche[] critRecherche { get; set; }
+        public IoRecherche[] ioRecherche { get; set; }
         private int tailleTabbCrit = 6;
+        private int tailleIoRecherche = 3;
 
 
 
         public Filtre()
         {
-            this.crit = new CritereRecherche[this.tailleTabbCrit];
-            for (int i = 0; i < this.crit.Length; i++)
+            this.critRecherche = new CritereRecherche[this.tailleTabbCrit];
+            for (int i = 0; i < this.critRecherche.Length; i++)
             {
-                this.crit[i] = new CritereRecherche();
+                this.critRecherche[i] = new CritereRecherche();
+            }
+            this.ioRecherche = new IoRecherche[this.tailleIoRecherche];
+            for (int i = 0; i < this.ioRecherche.Length; i++)
+            {
+                this.ioRecherche[i] = new IoRecherche();
             }
         }
 
         public void setCritere(List<CritereRecherche> listCrit)
         {
-            for (int i = 0; i < this.crit.Length; i++)
+            for (int i = 0; i < this.critRecherche.Length; i++)
             {
 
                 if (i < listCrit.Count)
                 {
-                    this.crit[i] = (listCrit[i] != null) ? listCrit[i] : new CritereRecherche();
+                    this.critRecherche[i] = (listCrit[i] != null) ? listCrit[i] : new CritereRecherche();
                 }
                 else
                 {
-                    this.crit[i] = new CritereRecherche();
+                    this.critRecherche[i] = new CritereRecherche();
+
+                }
+            }
+        }
+
+        public void setIoRecherche(List<IoRecherche> listIo)
+        {
+            for (int i = 0; i < this.ioRecherche.Length; i++)
+            {
+
+                if (i < listIo.Count)
+                {
+                    this.ioRecherche[i] = (listIo[i] != null) ? listIo[i] : new IoRecherche();
+                }
+                else
+                {
+                    this.ioRecherche[i] = new IoRecherche();
 
                 }
             }
@@ -127,11 +181,19 @@ namespace BEL
             chaineSortie += (this.intensiteOutMax != CritereRecherche.valeurParDefisNull) ? "Intensité en sortie max ≥ " + this.intensiteOutMax + "\n" : "";
 
 
-            foreach (CritereRecherche cr in this.crit)
+            foreach (CritereRecherche cr in this.critRecherche)
             {
                 if (cr != null)
                 {
                     chaineSortie += (cr.valeur != CritereRecherche.valeurParDefisNull) ? cr.ToString() + "\n" : "";
+                }
+            }
+
+            foreach (IoRecherche io in this.ioRecherche)
+            {
+                if (io != null)
+                {
+                    chaineSortie += (io.valeur != CritereRecherche.valeurParDefisNull) ? io.ToString() + "\n" : "";
                 }
             }
 

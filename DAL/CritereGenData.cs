@@ -38,7 +38,7 @@ namespace DAL
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "INSERT INTO Critère_Générique(id_critère  , désignation , unité, donnée_chiffrée, description) " +
                                 "VALUES ('" + critGen.idCritere + "', '" + critGen.designation 
-                                + "', '" + critGen.unite  + "', '" + critGen.donneeChiffree + "', '" + critGen.description + "')";
+                                + "', '" + critGen.unite  + "', " + critGen.donneeChiffree + ", '" + critGen.description + "')";
             return db.ExecuterRequete(cmd);
         }
 
@@ -64,6 +64,7 @@ namespace DAL
                 critGen.unite = (string)table.Rows[0][2];
                 critGen.donneeChiffree = (Boolean)table.Rows[0][3];
                 critGen.description = (string)table.Rows[0][4].ToString();
+                critGen.modifiable = (Boolean)table.Rows[0][5];
             }
             return critGen;
         }
@@ -91,6 +92,7 @@ namespace DAL
                 critGen.unite = (string)row[2];
                 critGen.donneeChiffree = (Boolean)row[3];
                 critGen.description = (string)row[4].ToString();
+                critGen.modifiable = (Boolean)row[5];
                 listCriGen.Add(critGen);
             }
             return listCriGen;

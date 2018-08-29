@@ -42,7 +42,7 @@ namespace DAL
                             + "niveau_nombre, niveau_texte) " +
                                 "VALUES ('" + fct.projet.idProjet
                                 + "', '" + fct.fonction.idFonction + "', '"
-                                + critAss.critere.idCritere + "', '" + critAss.valeurNbr.Replace(",",".") + "', '" + critAss.valeurTexte  + "')";
+                                + critAss.critere.idCritere + "', " + ((critAss.valeurNbr != null) ? critAss.valeurNbr.Replace(",", ".") : "null") + ", '" + critAss.valeurTexte + "')";
             return db.ExecuterRequete(cmd);
         }
             

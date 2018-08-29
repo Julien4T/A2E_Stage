@@ -25,8 +25,10 @@ namespace IHM
 
         private void FenCrudCritAssocie_Load(object sender, EventArgs e)
         {
-            IhmManager.listCritGen = cgm.getListCriGen();
-            this.cbCritere.DataSource = IhmManager.listCritGen;
+            ihmM.raffraichirCombobox(IhmManager.metier.CritGen, this.cbCritere);
+
+            //IhmManager.listCritGen = cgm.getListCriGen();
+            //this.cbCritere.DataSource = IhmManager.listCritGen;
             this.buttonAssocier.Text = "Ajouter";
 
             if (!IhmManager.ajouterAssociation) 
@@ -60,15 +62,36 @@ namespace IHM
 
         private void updateCrit_Click(object sender, EventArgs e)
         {
-            ihmM.modifierObj(IhmManager.metier.CritGen, this.cbCritere.SelectedValue);
-            ihmM.raffraichirCombobox(IhmManager.metier.CritGen, this.cbCritere);
+            CritereGenerique cg= new CritereGenerique();
+            cg = (CritereGenerique)this.cbCritere.SelectedValue;
+
+            if (cg.modifiable == false)
+            {
+                MessageBox.Show("Vous ne pouvez pas modifier ce critère ! ");
+            }
+            else
+            {
+                ihmM.modifierObj(IhmManager.metier.CritGen, this.cbCritere.SelectedValue);
+                ihmM.raffraichirCombobox(IhmManager.metier.CritGen, this.cbCritere);
+            }
         }
 
         private void deleteCrit_Click(object sender, EventArgs e)
         {
-            ihmM.supprimerObj(IhmManager.metier.CritGen, this.cbCritere.SelectedValue);
-            ihmM.raffraichirCombobox(IhmManager.metier.CritGen, this.cbCritere);
+            CritereGenerique cg = new CritereGenerique();
+            cg = (CritereGenerique)this.cbCritere.SelectedValue;
 
+            if (cg.modifiable == false)
+            {
+                MessageBox.Show("Vous ne pouvez pas supprimer ce critère ! ");
+            }
+            else
+            {
+                ihmM.supprimerObj(IhmManager.metier.CritGen, cg);
+                ihmM.raffraichirCombobox(IhmManager.metier.CritGen, this.cbCritere);
+
+            }
+          
         }
 
         private void buttonAssocier_Click(object sender, EventArgs e)
@@ -85,7 +108,7 @@ namespace IHM
 
             if (IhmManager.critGenSelect.donneeChiffree)
             {
-                crit.valeurNbr = (this.textBoxValeur.Text!="")? this.textBoxValeur.Text : "0" ;
+                crit.valeurNbr = (this.textBoxValeur.Text!="")? this.textBoxValeur.Text: "0" ;
                 crit.valeurTexte = null;
             }
             else

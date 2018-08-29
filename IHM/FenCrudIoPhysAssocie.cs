@@ -35,8 +35,9 @@ namespace IHM
 
         private void FenCrudIoPhysAssocie_Load(object sender, EventArgs e)
         {
-            IhmManager.listIoPhysGen = iogm.getListIoPhysiqueGen();
-            this.cbIoGen.DataSource = IhmManager.listIoPhysGen;
+            this.ihmM.raffraichirCombobox(IhmManager.metier.IoPhysGen, this.cbIoGen);
+            //IhmManager.listIoPhysGen = iogm.getListIoPhysiqueGen();
+            //this.cbIoGen.DataSource = IhmManager.listIoPhysGen;
             this.buttonAssocier.Text = "Ajouter";
 
             if (!IhmManager.ajouterAssociation)

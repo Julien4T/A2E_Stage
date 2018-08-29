@@ -22,6 +22,7 @@ namespace IHM
         private FonctionElectronique fctPrivate = new FonctionElectronique();
         
         private CritereGenManager cgm = new CritereGenManager();
+        private IoPhysiqueGenManager iopm = new IoPhysiqueGenManager();
 
         private Size tailleImage = new Size();
 
@@ -111,8 +112,8 @@ namespace IHM
             this.locationPictureBox();
             this.trackBarZoomSchema.Value = this.positionScrool();
             
-            this.openSvnProjet.Tag = fctElec.projet.lienSnvProjet;
-            this.openSvnFonction.Tag = fctElec.lienSVNTest;
+            this.ouvrirSvnProjet.Tag = fctElec.projet.lienSnvProjet;
+            this.ouvrirSvnFonction.Tag = fctElec.lienSVNTest;
             this.labelPlageTensionInput.Text = fctElec.getPlageTensionInput();
             this.labelPlageIntensitéInput.Text = fctElec.getPlageIntensiteInput();
             this.labelPlageTensionOutput.Text = fctElec.getPlageTensionOutput();
@@ -163,16 +164,18 @@ namespace IHM
         #endregion
 
         #region Controle lien SVN
-        private void openSvnProjet_Click(object sender, EventArgs e)
+        private void ouvrirSvnProjet_Click(object sender, EventArgs e)
         {
-            if (this.openSvnProjet.Tag != null)
-            System.Diagnostics.Process.Start("explorer.exe", @"" + this.openSvnProjet.Tag.ToString() + "");
+            if (this.ouvrirSvnProjet.Tag != null)
+                System.Diagnostics.Process.Start("explorer.exe", @"" + this.ouvrirSvnProjet.Tag.ToString() + "");
         }
-        private void openSvnFonction_Click(object sender, EventArgs e)
+
+        private void ouvrirSvnFonction_Click(object sender, EventArgs e)
         {
-            if (this.openSvnFonction.Tag != null)
-            System.Diagnostics.Process.Start("explorer.exe", @"" + this.openSvnFonction.Tag.ToString() + "");
+            if (this.ouvrirSvnFonction.Tag != null)
+                System.Diagnostics.Process.Start("explorer.exe", @"" + this.ouvrirSvnFonction.Tag.ToString() + "");
         }
+
         #endregion
 
         #region Controle picture box
@@ -286,39 +289,76 @@ namespace IHM
             this.comboBoxRubrique.Items.Add("Tous");
             this.ihmM.raffraichirCombobox(IhmManager.metier.FonctionGen, comboBoxRubrique, comboBoxFonction);
         }
-
-
-        private void ajouterCrit(Button b) {
+        private void ajouterCrit(Button b, IhmManager.typeFiltre tf)
+        {
             b.Dispose();
 
-            this.buttonCrit1 = new Button();
-            this.buttonCrit1.Anchor = AnchorStyles.Left;
-            this.buttonCrit1.BackColor = System.Drawing.SystemColors.Menu;
-            this.buttonCrit1.BackgroundImage = global::IHM.Properties.Resources.add;
-            this.buttonCrit1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonCrit1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCrit1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonCrit1.FlatAppearance.BorderSize = 0;
-            this.buttonCrit1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCrit1.Location = new System.Drawing.Point(8, 0);
-            this.buttonCrit1.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.buttonCrit1.Size = new System.Drawing.Size(25, 25);
-            this.buttonCrit1.UseVisualStyleBackColor = false;
-            
             List<CritereGenerique> listCrit;
             listCrit = new List<CritereGenerique>();
-            listCrit = this.cgm.getListCriGen();          
-            ControlCritere cc = new ControlCritere(listCrit);
-            this.tableLayoutPanelCrit.Controls.Add(cc);
-            this.tableLayoutPanelCrit.Controls.Add(this.buttonCrit1);
+            listCrit = this.cgm.getListCriGen().Where(m => m.modifiable == true)
+                            .Where(nbr => nbr.donneeChiffree == true)                 
+                            .ToList();
 
-            this.buttonCrit1.Click += new System.EventHandler(this.buttonCrit1_Click);
+            List<IoPhysiqueGenerique> listIo;
+            listIo = new List<IoPhysiqueGenerique>();
+            listIo = this.iopm.getListIoPhysiqueGen();
+            switch (tf)
+            {
+
+                case IhmManager.typeFiltre.critere:
+
+                    this.buttonCrit1 = new Button();
+                    this.buttonCrit1.Anchor = AnchorStyles.Left;
+                    this.buttonCrit1.BackColor = System.Drawing.SystemColors.Menu;
+                    this.buttonCrit1.BackgroundImage = global::IHM.Properties.Resources.add;
+                    this.buttonCrit1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+                    this.buttonCrit1.Cursor = System.Windows.Forms.Cursors.Hand;
+                    this.buttonCrit1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+                    this.buttonCrit1.FlatAppearance.BorderSize = 0;
+                    this.buttonCrit1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+                    this.buttonCrit1.Location = new System.Drawing.Point(8, 0);
+                    this.buttonCrit1.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
+                    this.buttonCrit1.Size = new System.Drawing.Size(25, 25);
+                    this.buttonCrit1.UseVisualStyleBackColor = false;
+                    ControlCritere cc = new ControlCritere(IhmManager.typeFiltre.critere, listCrit, listIo);
+                    this.tableLayoutPanelCrit.Controls.Add(cc);
+                    this.tableLayoutPanelCrit.Controls.Add(this.buttonCrit1);
+                    this.buttonCrit1.Click += new System.EventHandler(this.buttonCrit1_Click);
+                    break;
+                case IhmManager.typeFiltre.iophys:
+                    this.buttonIoPhys = new Button();
+                    this.buttonIoPhys.Anchor = AnchorStyles.Left;
+                    this.buttonIoPhys.BackColor = System.Drawing.SystemColors.Menu;
+                    this.buttonIoPhys.BackgroundImage = global::IHM.Properties.Resources.add;
+                    this.buttonIoPhys.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+                    this.buttonIoPhys.Cursor = System.Windows.Forms.Cursors.Hand;
+                    this.buttonIoPhys.FlatAppearance.BorderColor = System.Drawing.Color.White;
+                    this.buttonIoPhys.FlatAppearance.BorderSize = 0;
+                    this.buttonIoPhys.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+                    this.buttonIoPhys.Location = new System.Drawing.Point(8, 0);
+                    this.buttonIoPhys.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
+                    this.buttonIoPhys.Size = new System.Drawing.Size(25, 25);
+                    this.buttonIoPhys.UseVisualStyleBackColor = false;
+                    ControlCritere ccio = new ControlCritere(IhmManager.typeFiltre.iophys, listCrit, listIo);
+                    this.tableLayoutPanelIoPhys.Controls.Add(ccio);
+                    this.tableLayoutPanelIoPhys.Controls.Add(this.buttonIoPhys);
+                    this.buttonIoPhys.Click += new System.EventHandler(this.buttonIoPhys_Click);
+                    break;
+
+            }
         }
-
+          
         private void buttonCrit1_Click(object sender, EventArgs e)        
         {
-            this.ajouterCrit(this.buttonCrit1);
+            this.ajouterCrit(this.buttonCrit1, IhmManager.typeFiltre.critere);
         }
+
+        private void buttonIoPhys_Click(object sender, EventArgs e)
+        {
+            this.ajouterCrit(this.buttonIoPhys, IhmManager.typeFiltre.iophys);
+
+        }
+
 
         private void comboBoxRubrique_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -328,8 +368,41 @@ namespace IHM
                           .ToList();
         }
 
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.ihmM.texteBoxFloatConstraint(this.textBox1, e);
+        }
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.ihmM.texteBoxFloatConstraint(this.textBox2, e);
 
-        
+        }
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.ihmM.texteBoxFloatConstraint(this.textBox3, e);
+        }
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.ihmM.texteBoxFloatConstraint(this.textBox4, e);
+        }
+        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.ihmM.texteBoxFloatConstraint(this.textBox5, e);
+        }
+        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.ihmM.texteBoxFloatConstraint(this.textBox6, e);
+        }
+        private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.ihmM.texteBoxFloatConstraint(this.textBox7, e);
+        }
+        private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.ihmM.texteBoxFloatConstraint(this.textBox8, e);
+        }
+
+                
         private void toolStripButtonSearch_Click(object sender, EventArgs e)
         {
             this.filtre.fonction = (FonctionGenerique)this.comboBoxFonction.SelectedValue;
@@ -355,6 +428,14 @@ namespace IHM
             }
             this.filtre.setCritere(listCrit);
 
+            //Construction du tableau des Io de recherche
+            List<IoRecherche> listIo = new List<IoRecherche>();
+            foreach (ControlCritere cc in this.tableLayoutPanelIoPhys.Controls.OfType<ControlCritere>())
+            {
+                listIo.Add(cc.getIo());
+            }
+            this.filtre.setIoRecherche(listIo);
+
 
             IhmManager.listFctElct = this.fctManager.getListFonction(this.filtre);
             this.remplirTreeView(IhmManager.listFctElct, this.filtre.fonction.idFonction);
@@ -370,20 +451,47 @@ namespace IHM
                 cc.Dispose();
             }
 
+            foreach (ControlCritere cc in this.tableLayoutPanelIoPhys.Controls.OfType<ControlCritere>().Reverse())
+            {
+                cc.Dispose();
+            }
+
             foreach (TextBox tb in tableLayoutPanelDataInput.Controls.OfType<TextBox>()) 
             {
                 tb.Text="";
             }    
         
         }
-
-        #endregion
-
         private void toolStripButtonRefresh_Click(object sender, EventArgs e)
         {
             this.reinitialiserFiltre();
         }
 
+
+        #endregion
+
+       
+       
+       
+      
+        
+
+       
+
+     
+
+      
+     
+
+       
+
+       
+       
+
+      
+       
+
+      
       
 
        

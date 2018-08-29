@@ -41,8 +41,8 @@ namespace BAL
             }
             else 
             {
-                fctGen.rubrique = fctGen.rubrique[0].ToString().ToUpper() + fctGen.rubrique.Substring(1).ToLower();
-                fctGen.designation = fctGen.designation[0].ToString().ToUpper() + fctGen.designation.Substring(1).ToLower();
+                //fctGen.rubrique = fctGen.rubrique[0].ToString().ToUpper() + fctGen.rubrique.Substring(1).ToLower();
+                //fctGen.designation = fctGen.designation[0].ToString().ToUpper() + fctGen.designation.Substring(1).ToLower();
                 return fgd.ajouterFonctionGen(this.echappementFctGen(fctGen));
             }
            
@@ -99,8 +99,8 @@ namespace BAL
             }
             else
             {
-                fctGen.rubrique = fctGen.rubrique[0].ToString().ToUpper() + fctGen.rubrique.Substring(1).ToLower();
-                fctGen.designation = fctGen.designation[0].ToString().ToUpper() + fctGen.designation.Substring(1).ToLower();
+                //fctGen.rubrique = fctGen.rubrique[0].ToString().ToUpper() + fctGen.rubrique.Substring(1).ToLower();
+                //fctGen.designation = fctGen.designation[0].ToString().ToUpper() + fctGen.designation.Substring(1).ToLower();
                 return fgd.modifierFctGen(this.echappementFctGen(fctGen));
             }
            

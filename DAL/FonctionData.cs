@@ -179,13 +179,29 @@ namespace DAL
             DbCommand cmd = db.CreerCommande();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "call filtrerPremier (" + f.fonction.idFonction + ", "
-                + f.tensionInMin + ", " + f.tensionInMax + ", "
-                + f.intensiteInMin + ", " + f.intensiteInMax + ", "
-                + f.tensionOutMin + ", " + f.tensionOutMax + ", "
-                + f.intensiteOutMin + ", " + f.intensiteOutMax + ", "
-                + ((f.crit[0].crit != null) ? f.crit[0].crit.idCritere : CritereRecherche.valeurParDefisNull) + ", " 
-                + ((f.crit[0].signe != null) ? f.crit[0].signe.valeur : CritereRecherche.valeurParDefisNull) + ", " 
-                + f.crit[0].valeur + " ) ";
+                + f.tensionInMin.ToString().Replace(",", ".") + ", " + f.tensionInMax.ToString().Replace(",", ".") + ", "
+                + f.intensiteInMin.ToString().Replace(",", ".") + ", " + f.intensiteInMax.ToString().Replace(",", ".") + ", "
+                + f.tensionOutMin.ToString().Replace(",", ".") + ", " + f.tensionOutMax.ToString().Replace(",", ".") + ", "
+                + f.intensiteOutMin.ToString().Replace(",", ".") + ", " + f.intensiteOutMax.ToString().Replace(",", ".") + ", "
+                + ((f.critRecherche[0].crit != null) ? f.critRecherche[0].crit.idCritere : CritereRecherche.valeurParDefisNull) + ", " 
+                + ((f.critRecherche[0].signe != null) ? f.critRecherche[0].signe.valeur : CritereRecherche.valeurParDefisNull) + ", "
+                + f.critRecherche[0].valeur.ToString().Replace(",", ".") + ", "
+                + ((f.critRecherche[1].crit != null) ? f.critRecherche[1].crit.idCritere : CritereRecherche.valeurParDefisNull) + ", " 
+                + ((f.critRecherche[1].signe != null) ? f.critRecherche[1].signe.valeur : CritereRecherche.valeurParDefisNull) + ", "
+                + f.critRecherche[1].valeur.ToString().Replace(",", ".") + ", "                
+                 + ((f.critRecherche[2].crit != null) ? f.critRecherche[2].crit.idCritere : CritereRecherche.valeurParDefisNull) + ", " 
+                + ((f.critRecherche[2].signe != null) ? f.critRecherche[2].signe.valeur : CritereRecherche.valeurParDefisNull) + ", "
+                + f.critRecherche[2].valeur.ToString().Replace(",", ".") + ", "                
+                 + ((f.critRecherche[3].crit != null) ? f.critRecherche[3].crit.idCritere : CritereRecherche.valeurParDefisNull) + ", " 
+                + ((f.critRecherche[3].signe != null) ? f.critRecherche[3].signe.valeur : CritereRecherche.valeurParDefisNull) + ", "
+                + f.critRecherche[3].valeur.ToString().Replace(",", ".") + ", "                
+                 + ((f.critRecherche[4].crit != null) ? f.critRecherche[4].crit.idCritere : CritereRecherche.valeurParDefisNull) + ", " 
+                + ((f.critRecherche[4].signe != null) ? f.critRecherche[4].signe.valeur : CritereRecherche.valeurParDefisNull) + ", "
+                + f.critRecherche[4].valeur.ToString().Replace(",", ".") + ", "                
+                 + ((f.critRecherche[5].crit != null) ? f.critRecherche[5].crit.idCritere : CritereRecherche.valeurParDefisNull) + ", " 
+                + ((f.critRecherche[5].signe != null) ? f.critRecherche[5].signe.valeur : CritereRecherche.valeurParDefisNull) + ", "
+                + f.critRecherche[5].valeur.ToString().Replace(",", ".") + " "  
+                + ") ";
 
 
 

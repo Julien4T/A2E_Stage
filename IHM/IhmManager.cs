@@ -20,6 +20,7 @@ namespace IHM
         //public static IhmManager ihmManager = new IhmManager();
 
         public enum metier { Personnel, Projet, FonctionGen, IoPhysGen, CritGen };
+        public enum typeFiltre { critere, iophys};
       
         
         
@@ -74,8 +75,9 @@ namespace IHM
             {                
                     IhmManager.listFctGen = this.fctGenManager.getListFonctionGen();
                     cb1.DataSource = IhmManager.listFctGen
+                                .OrderBy(r => r.rubrique)
                                 .GroupBy(r => r.rubrique)
-                                .Select(ru => ru.Key)
+                                .Select(ru => ru.Key)                                
                                 .ToList(); ;
                     cb2.DataSource = IhmManager.listFctGen
                                 .OrderBy(d => d.designation)
@@ -89,22 +91,25 @@ namespace IHM
             {
 
                 case metier.Projet:
-                    IhmManager.listProjet = this.projetManager.getListProjet();
-                    cb.DataSource = IhmManager.listProjet;                   
+                    IhmManager.listProjet = this.projetManager.getListProjet(); 
+                    cb.DataSource = IhmManager.listProjet.OrderByDescending(d => d.dateProjet).ToList();                  
                     break;
                 case metier.Personnel:
-                    IhmManager.listPers = this.persManager.getListPersonnel();
-                    cb.DataSource = IhmManager.listPers;                    
+                    IhmManager.listPers = this.persManager.getListPersonnel() ;
+                    cb.DataSource = IhmManager.listPers.OrderBy(n => n.nom).ToList();                    
                     break;
                 case metier.FonctionGen:                   
                     break;
                 case metier.IoPhysGen:
                     IhmManager.listIoPhysGen = this.ioPhysGenManager.getListIoPhysiqueGen();
-                    cb.DataSource = IhmManager.listIoPhysGen;                    
+                    cb.DataSource = IhmManager.listIoPhysGen.OrderBy(d => d.designation).ToList();                    
                     break;
                 case metier.CritGen:
                     IhmManager.listCritGen = this.critGenManager.getListCriGen();
-                    cb.DataSource = IhmManager.listCritGen;                    
+                    cb.DataSource = IhmManager.listCritGen                        
+                        .OrderBy(d => d.designation)
+                        .OrderBy(mo => mo.modifiable)
+                        .ToList();                   
                     break;
                 default:
                     break;
@@ -189,8 +194,7 @@ namespace IHM
                     dialogResult = MessageBox.Show("Etes-vous sur de vouloir supprimer le projet #" + IhmManager.projetSelect + " ?",
                         "Suppression", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (dialogResult == DialogResult.Yes)
-                    {
-                        //do something
+                    {                        
                         this.projetManager.supprimerProjet(IhmManager.projetSelect);                      
                     }
                     break;
@@ -201,8 +205,7 @@ namespace IHM
                     dialogResult = MessageBox.Show("Etes-vous sur de vouloir supprimer le personnel #" + IhmManager.persSelect + " ?",
                        "Suppression", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (dialogResult == DialogResult.Yes)
-                    {
-                        //do something
+                    {                        
                         this.persManager.supprimerPersonne(IhmManager.persSelect);
                     }
                     break;
@@ -214,7 +217,6 @@ namespace IHM
                        "Suppression", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (dialogResult == DialogResult.Yes)
                     {
-                        //do something
                         this.fctGenManager.supprimerFctGen(IhmManager.fctGenSelect);
                     }
                     break;
@@ -225,8 +227,7 @@ namespace IHM
                     dialogResult = MessageBox.Show("Etes-vous sur de vouloir supprimer l'IO physique #" + IhmManager.ioPhysGenSelect + " ?",
                         "Suppression", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (dialogResult == DialogResult.Yes)
-                    {
-                        //do something
+                    {                       
                         this.ioPhysGenManager.supprimerIoPhysiqueGen(IhmManager.ioPhysGenSelect);
                     }
                     break;
@@ -238,7 +239,6 @@ namespace IHM
                         "Suppression", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (dialogResult == DialogResult.Yes)
                     {
-                        //do something
                         this.critGenManager.supprimerCritGen(IhmManager.critGenSelect);
                     }
                     break;
@@ -277,8 +277,12 @@ namespace IHM
                 return lienForBdd;
             }   
             catch (Exception e)
-            {             
-                MessageBox.Show(e.Message);
+            {
+                if ((e.GetType()) != typeof(System.NullReferenceException)) 
+                {
+                    MessageBox.Show("Une erreur est survenue : " + e.Message, "Impossible d'enregistrer l'image", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+             
                 return null;
             }  
         }
@@ -298,7 +302,12 @@ namespace IHM
             }
             catch (Exception e)
             {
-                MessageBox.Show("Une erreur est survenue : " + e.Message, "Impossible de charger l'image", MessageBoxButtons.OK, MessageBoxIcon.Error);
+     
+                if ((e.GetType()) != typeof(System.ArgumentException))
+                {
+                    //MessageBox.Show("Une erreur est survenue : " + e.Message, "Impossible de charger l'image", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
                 pb.Image = null;
                 pb.Refresh();
             }
@@ -321,25 +330,57 @@ namespace IHM
 
         //Cette fonction autorise seulement les nombres et une seule virgule dans la textbox    
         public void texteBoxFloatConstraint(TextBox tb, KeyPressEventArgs e)
-        {
+        {    
+              //Empeche les characteres autre que ceux specifié ("0-9",".") d'être écris
             if (System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString().ToUpper(), @"[^0-9^.]"))
-            {
-                //Empeche les characteres autre que ceux specifié d'être écris
+            {              
                 e.Handled = true;
             }
-            if (e.KeyChar == (char)8) //autorise la touche backspace
+            if (e.KeyChar == (char)8 ) 
             {
+                //autorise la touche backspace
                 e.Handled = false;
             }
-            if ((tb.Text.Contains(".") || tb.Text.Contains(",")) & e.KeyChar == '.') // autorise un seul .
+            // pas d'ajout de nombre avant le signe
+            if (tb.Text.Contains("-") && tb.SelectionStart == 0 && tb.SelectionLength != tb.Text.Length) 
+            {
+                e.Handled = true;                
+            }
+            // une seule virgule autorisée
+            if ((tb.Text.Contains(".") || tb.Text.Contains(",")) & e.KeyChar == '.' && tb.SelectionLength != tb.Text.Length)
             {
                 e.Handled = true;
             }
-            if (tb.Text.Length <=0  & e.KeyChar == '-') // autorise un seul - au début du mot
+            // autorise un seul - au début du mot et on enlève le moins si il existe déjà                
+            if (e.KeyChar == '-') 
             {
-                e.Handled = false;
+                if (tb.SelectionLength == tb.Text.Length)
+                {
+                    tb.Text = "-";
+                    tb.SelectionStart = tb.Text.Length;
+                }
+                else if (tb.Text.Contains("-"))
+                {
+                    tb.Text = tb.Text.Replace("-", "");
+                    tb.SelectionStart = tb.Text.Length;
+                }
+                else
+                {
+                    tb.Text = "-" + tb.Text;
+                    tb.SelectionStart = tb.Text.Length;
+                }
             }
-        }
+            // positif si le signe est négatif
+            if (e.KeyChar == '+') 
+            {
+                if (tb.Text.Contains("-"))
+                {
+                    tb.Text = tb.Text.Replace("-", "");
+                    tb.SelectionStart = tb.Text.Length;
+                }
+            }            
+        }      
+      
         public void texteBoxIntConstraint(TextBox tb, KeyPressEventArgs e)
         {
             if (System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString().ToUpper(), @"[^0-9^]"))

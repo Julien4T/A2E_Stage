@@ -64,6 +64,7 @@ namespace BEL
         public string   designation     { get; set; }	
         public string   unite 	        { get; set; }
         public Boolean  donneeChiffree  { get; set; }
+        public Boolean  modifiable      { get; set; }
         public string   description     { get; set; }
         public override string ToString()
         {

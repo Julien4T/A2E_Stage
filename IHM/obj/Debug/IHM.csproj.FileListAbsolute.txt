@@ -53,3 +53,6 @@ C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\obj\Debug\IHM.ap
 C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\obj\Debug\IHM.FenCrudIoPhysAssocie.resources
 C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\bin\Debug\CaptureEcran.exe
 C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\bin\Debug\CaptureEcran.pdb
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\bin\Debug\IHM.exe.config
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\obj\Debug\IHM.exe
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\obj\Debug\IHM.pdb

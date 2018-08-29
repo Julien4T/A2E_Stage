@@ -33,9 +33,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nouveauProjetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ouvrirUneFonctionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.outilsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.outilDeCaptureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterFonctionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterIOPhysiqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,14 +59,14 @@
             this.radioButtonVoui = new System.Windows.Forms.RadioButton();
             this.label18 = new System.Windows.Forms.Label();
             this.radioButtonVTous = new System.Windows.Forms.RadioButton();
-            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButtonSearch = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButtonRefresh = new System.Windows.Forms.ToolStripButton();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
             this.comboBoxFonction = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.comboBoxRubrique = new System.Windows.Forms.ComboBox();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButtonSearch = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButtonRefresh = new System.Windows.Forms.ToolStripButton();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBoxDataOutput = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -96,6 +95,9 @@
             this.groupBoxCritere = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanelCrit = new System.Windows.Forms.TableLayoutPanel();
             this.buttonCrit1 = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanelIoPhys = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonIoPhys = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -123,10 +125,10 @@
             this.labelPlageTensionInput = new System.Windows.Forms.Label();
             this.groupBoxSVN = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.openSvnProjet = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.openSvnFonction = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.toolStrip3 = new System.Windows.Forms.ToolStrip();
+            this.ouvrirSvnProjet = new System.Windows.Forms.ToolStripButton();
+            this.toolStrip6 = new System.Windows.Forms.ToolStrip();
+            this.ouvrirSvnFonction = new System.Windows.Forms.ToolStripButton();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
             this.labelDate = new System.Windows.Forms.Label();
             this.labelResponsable = new System.Windows.Forms.Label();
@@ -173,6 +175,9 @@
             this.toolStripContainerMain = new System.Windows.Forms.ToolStripContainer();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipFiltre = new System.Windows.Forms.ToolTip(this.components);
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -184,8 +189,8 @@
             this.groupBoxMainFiltre.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel18.SuspendLayout();
-            this.toolStrip2.SuspendLayout();
             this.tableLayoutPanel17.SuspendLayout();
+            this.toolStrip2.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
             this.groupBoxDataOutput.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -193,6 +198,8 @@
             this.tableLayoutPanelDataInput.SuspendLayout();
             this.groupBoxCritere.SuspendLayout();
             this.tableLayoutPanelCrit.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.tableLayoutPanelIoPhys.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -216,6 +223,8 @@
             this.tableLayoutPanel10.SuspendLayout();
             this.groupBoxSVN.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
+            this.toolStrip3.SuspendLayout();
+            this.toolStrip6.SuspendLayout();
             this.tableLayoutPanel12.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.splitContainerDetail.Panel1.SuspendLayout();
@@ -252,7 +261,6 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fichierToolStripMenuItem,
-            this.outilsToolStripMenuItem,
             this.optionsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -264,6 +272,7 @@
             // 
             this.fichierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nouveauProjetToolStripMenuItem,
+            this.ouvrirUneFonctionToolStripMenuItem,
             this.quitterToolStripMenuItem});
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
             this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
@@ -272,28 +281,20 @@
             // nouveauProjetToolStripMenuItem
             // 
             this.nouveauProjetToolStripMenuItem.Name = "nouveauProjetToolStripMenuItem";
-            this.nouveauProjetToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.nouveauProjetToolStripMenuItem.Text = "Nouveau Projet";
+            this.nouveauProjetToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.nouveauProjetToolStripMenuItem.Text = "Nouvelle fonction";
+            // 
+            // ouvrirUneFonctionToolStripMenuItem
+            // 
+            this.ouvrirUneFonctionToolStripMenuItem.Name = "ouvrirUneFonctionToolStripMenuItem";
+            this.ouvrirUneFonctionToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.ouvrirUneFonctionToolStripMenuItem.Text = "Ouvrir une fonction";
             // 
             // quitterToolStripMenuItem
             // 
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.quitterToolStripMenuItem.Text = "Quitter";
-            // 
-            // outilsToolStripMenuItem
-            // 
-            this.outilsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.outilDeCaptureToolStripMenuItem});
-            this.outilsToolStripMenuItem.Name = "outilsToolStripMenuItem";
-            this.outilsToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.outilsToolStripMenuItem.Text = "Outils";
-            // 
-            // outilDeCaptureToolStripMenuItem
-            // 
-            this.outilDeCaptureToolStripMenuItem.Name = "outilDeCaptureToolStripMenuItem";
-            this.outilDeCaptureToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.outilDeCaptureToolStripMenuItem.Text = "Outil de capture";
             // 
             // optionsToolStripMenuItem
             // 
@@ -463,6 +464,7 @@
             this.tableLayoutPanelFiltreNiveau2.Controls.Add(this.groupBoxMainFiltre, 0, 0);
             this.tableLayoutPanelFiltreNiveau2.Controls.Add(this.tableLayoutPanel15, 1, 0);
             this.tableLayoutPanelFiltreNiveau2.Controls.Add(this.groupBoxCritere, 2, 0);
+            this.tableLayoutPanelFiltreNiveau2.Controls.Add(this.groupBox3, 3, 0);
             this.tableLayoutPanelFiltreNiveau2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelFiltreNiveau2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanelFiltreNiveau2.Name = "tableLayoutPanelFiltreNiveau2";
@@ -487,8 +489,8 @@
             this.tableLayoutPanel8.ColumnCount = 1;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel18, 0, 1);
-            this.tableLayoutPanel8.Controls.Add(this.toolStrip2, 0, 2);
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel17, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.toolStrip2, 0, 2);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
@@ -563,44 +565,6 @@
             this.radioButtonVTous.Text = "Tous";
             this.radioButtonVTous.UseVisualStyleBackColor = true;
             // 
-            // toolStrip2
-            // 
-            this.toolStrip2.BackColor = System.Drawing.SystemColors.Menu;
-            this.toolStrip2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.toolStrip2.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButtonSearch,
-            this.toolStripSeparator3,
-            this.toolStripButtonRefresh});
-            this.toolStrip2.Location = new System.Drawing.Point(0, 102);
-            this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(288, 51);
-            this.toolStrip2.TabIndex = 0;
-            this.toolStrip2.Text = "toolStrip2";
-            // 
-            // toolStripButtonSearch
-            // 
-            this.toolStripButtonSearch.Image = global::IHM.Properties.Resources.search;
-            this.toolStripButtonSearch.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonSearch.Name = "toolStripButtonSearch";
-            this.toolStripButtonSearch.Size = new System.Drawing.Size(102, 36);
-            this.toolStripButtonSearch.Text = "Rechercher";
-            this.toolStripButtonSearch.Click += new System.EventHandler(this.toolStripButtonSearch_Click);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 39);
-            // 
-            // toolStripButtonRefresh
-            // 
-            this.toolStripButtonRefresh.Image = global::IHM.Properties.Resources.refresh;
-            this.toolStripButtonRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonRefresh.Name = "toolStripButtonRefresh";
-            this.toolStripButtonRefresh.Size = new System.Drawing.Size(103, 36);
-            this.toolStripButtonRefresh.Text = "Réinitialiser";
-            this.toolStripButtonRefresh.Click += new System.EventHandler(this.toolStripButtonRefresh_Click);
-            // 
             // tableLayoutPanel17
             // 
             this.tableLayoutPanel17.ColumnCount = 3;
@@ -648,6 +612,44 @@
             this.comboBoxRubrique.Size = new System.Drawing.Size(102, 21);
             this.comboBoxRubrique.TabIndex = 2;
             this.comboBoxRubrique.SelectedIndexChanged += new System.EventHandler(this.comboBoxRubrique_SelectedIndexChanged);
+            // 
+            // toolStrip2
+            // 
+            this.toolStrip2.BackColor = System.Drawing.SystemColors.Menu;
+            this.toolStrip2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.toolStrip2.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButtonSearch,
+            this.toolStripSeparator3,
+            this.toolStripButtonRefresh});
+            this.toolStrip2.Location = new System.Drawing.Point(0, 102);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(288, 51);
+            this.toolStrip2.TabIndex = 0;
+            this.toolStrip2.Text = "toolStrip2";
+            // 
+            // toolStripButtonSearch
+            // 
+            this.toolStripButtonSearch.Image = global::IHM.Properties.Resources.search;
+            this.toolStripButtonSearch.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonSearch.Name = "toolStripButtonSearch";
+            this.toolStripButtonSearch.Size = new System.Drawing.Size(102, 48);
+            this.toolStripButtonSearch.Text = "Rechercher";
+            this.toolStripButtonSearch.Click += new System.EventHandler(this.toolStripButtonSearch_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 51);
+            // 
+            // toolStripButtonRefresh
+            // 
+            this.toolStripButtonRefresh.Image = global::IHM.Properties.Resources.refresh;
+            this.toolStripButtonRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonRefresh.Name = "toolStripButtonRefresh";
+            this.toolStripButtonRefresh.Size = new System.Drawing.Size(103, 48);
+            this.toolStripButtonRefresh.Text = "Réinitialiser";
+            this.toolStripButtonRefresh.Click += new System.EventHandler(this.toolStripButtonRefresh_Click);
             // 
             // tableLayoutPanel15
             // 
@@ -718,9 +720,11 @@
             // 
             this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox6.Location = new System.Drawing.Point(142, 3);
+            this.textBox6.MaxLength = 20;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(73, 20);
             this.textBox6.TabIndex = 9;
+            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
             // 
             // label12
             // 
@@ -781,10 +785,12 @@
             this.textBox5.AccessibleName = "regerg";
             this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox5.Location = new System.Drawing.Point(63, 3);
+            this.textBox5.MaxLength = 20;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(73, 20);
             this.textBox5.TabIndex = 8;
             this.textBox5.Tag = "regreg";
+            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
             // textBox8
             // 
@@ -792,18 +798,22 @@
             this.textBox8.AccessibleName = "regerg";
             this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox8.Location = new System.Drawing.Point(142, 42);
+            this.textBox8.MaxLength = 20;
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(73, 20);
             this.textBox8.TabIndex = 8;
             this.textBox8.Tag = "regreg";
+            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
             // 
             // textBox7
             // 
             this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox7.Location = new System.Drawing.Point(63, 42);
+            this.textBox7.MaxLength = 20;
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(73, 20);
             this.textBox7.TabIndex = 7;
+            this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox7_KeyPress);
             // 
             // groupBoxDataInput
             // 
@@ -858,25 +868,31 @@
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(63, 3);
+            this.textBox1.MaxLength = 20;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(73, 20);
             this.textBox1.TabIndex = 9;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // textBox3
             // 
             this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox3.Location = new System.Drawing.Point(63, 42);
+            this.textBox3.MaxLength = 20;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(73, 20);
             this.textBox3.TabIndex = 6;
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // textBox2
             // 
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.Location = new System.Drawing.Point(142, 3);
+            this.textBox2.MaxLength = 20;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(73, 20);
             this.textBox2.TabIndex = 6;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // label7
             // 
@@ -935,9 +951,11 @@
             // 
             this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox4.Location = new System.Drawing.Point(142, 42);
+            this.textBox4.MaxLength = 20;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(73, 20);
             this.textBox4.TabIndex = 7;
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
             // groupBoxCritere
             // 
@@ -986,6 +1004,53 @@
             this.buttonCrit1.TabIndex = 15;
             this.buttonCrit1.UseVisualStyleBackColor = false;
             this.buttonCrit1.Click += new System.EventHandler(this.buttonCrit1_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.tableLayoutPanelIoPhys);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.Location = new System.Drawing.Point(1157, 3);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(296, 172);
+            this.groupBox3.TabIndex = 4;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "I/O physiques";
+            // 
+            // tableLayoutPanelIoPhys
+            // 
+            this.tableLayoutPanelIoPhys.ColumnCount = 1;
+            this.tableLayoutPanelIoPhys.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelIoPhys.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelIoPhys.Controls.Add(this.buttonIoPhys, 0, 0);
+            this.tableLayoutPanelIoPhys.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanelIoPhys.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanelIoPhys.Name = "tableLayoutPanelIoPhys";
+            this.tableLayoutPanelIoPhys.RowCount = 3;
+            this.tableLayoutPanelIoPhys.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanelIoPhys.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanelIoPhys.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanelIoPhys.Size = new System.Drawing.Size(290, 153);
+            this.tableLayoutPanelIoPhys.TabIndex = 0;
+            // 
+            // buttonIoPhys
+            // 
+            this.buttonIoPhys.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.buttonIoPhys.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.buttonIoPhys.BackColor = System.Drawing.SystemColors.Menu;
+            this.buttonIoPhys.BackgroundImage = global::IHM.Properties.Resources.add;
+            this.buttonIoPhys.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonIoPhys.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonIoPhys.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonIoPhys.FlatAppearance.BorderSize = 0;
+            this.buttonIoPhys.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonIoPhys.Location = new System.Drawing.Point(8, 10);
+            this.buttonIoPhys.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.buttonIoPhys.Name = "buttonIoPhys";
+            this.buttonIoPhys.Padding = new System.Windows.Forms.Padding(5);
+            this.buttonIoPhys.Size = new System.Drawing.Size(32, 30);
+            this.buttonIoPhys.TabIndex = 16;
+            this.buttonIoPhys.UseVisualStyleBackColor = false;
+            this.buttonIoPhys.Click += new System.EventHandler(this.buttonIoPhys_Click);
             // 
             // groupBox2
             // 
@@ -1116,7 +1181,7 @@
             this.pictureBoxSchema.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureBoxSchema.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxSchema.Name = "pictureBoxSchema";
-            this.pictureBoxSchema.Size = new System.Drawing.Size(148, 106);
+            this.pictureBoxSchema.Size = new System.Drawing.Size(162, 124);
             this.pictureBoxSchema.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxSchema.TabIndex = 0;
             this.pictureBoxSchema.TabStop = false;
@@ -1203,7 +1268,7 @@
             // tableLayoutPanel9
             // 
             this.tableLayoutPanel9.ColumnCount = 4;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 160F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 180F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
@@ -1224,10 +1289,10 @@
             // 
             this.groupBoxDef.Controls.Add(this.richTextBox1);
             this.groupBoxDef.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBoxDef.Location = new System.Drawing.Point(691, 3);
+            this.groupBoxDef.Location = new System.Drawing.Point(699, 3);
             this.groupBoxDef.Name = "groupBoxDef";
             this.groupBoxDef.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBoxDef.Size = new System.Drawing.Size(349, 84);
+            this.groupBoxDef.Size = new System.Drawing.Size(341, 84);
             this.groupBoxDef.TabIndex = 3;
             this.groupBoxDef.TabStop = false;
             this.groupBoxDef.Text = "Définition";
@@ -1239,7 +1304,7 @@
             this.richTextBox1.Location = new System.Drawing.Point(6, 19);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(10);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(337, 59);
+            this.richTextBox1.Size = new System.Drawing.Size(329, 59);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
@@ -1247,9 +1312,9 @@
             // 
             this.groupBoxDonneeSortie.Controls.Add(this.tableLayoutPanel11);
             this.groupBoxDonneeSortie.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBoxDonneeSortie.Location = new System.Drawing.Point(427, 3);
+            this.groupBoxDonneeSortie.Location = new System.Drawing.Point(441, 3);
             this.groupBoxDonneeSortie.Name = "groupBoxDonneeSortie";
-            this.groupBoxDonneeSortie.Size = new System.Drawing.Size(258, 84);
+            this.groupBoxDonneeSortie.Size = new System.Drawing.Size(252, 84);
             this.groupBoxDonneeSortie.TabIndex = 2;
             this.groupBoxDonneeSortie.TabStop = false;
             this.groupBoxDonneeSortie.Text = "Données sorties";
@@ -1268,7 +1333,7 @@
             this.tableLayoutPanel11.RowCount = 2;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(252, 65);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(246, 65);
             this.tableLayoutPanel11.TabIndex = 2;
             // 
             // labelPlageIntensitéOutput
@@ -1295,9 +1360,9 @@
             // 
             this.groupBoxDonneeEntree.Controls.Add(this.tableLayoutPanel10);
             this.groupBoxDonneeEntree.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBoxDonneeEntree.Location = new System.Drawing.Point(163, 3);
+            this.groupBoxDonneeEntree.Location = new System.Drawing.Point(183, 3);
             this.groupBoxDonneeEntree.Name = "groupBoxDonneeEntree";
-            this.groupBoxDonneeEntree.Size = new System.Drawing.Size(258, 84);
+            this.groupBoxDonneeEntree.Size = new System.Drawing.Size(252, 84);
             this.groupBoxDonneeEntree.TabIndex = 1;
             this.groupBoxDonneeEntree.TabStop = false;
             this.groupBoxDonneeEntree.Text = "Données entrées";
@@ -1316,7 +1381,7 @@
             this.tableLayoutPanel10.RowCount = 2;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(252, 65);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(246, 65);
             this.tableLayoutPanel10.TabIndex = 1;
             // 
             // labelPlageIntensitéInput
@@ -1345,20 +1410,18 @@
             this.groupBoxSVN.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxSVN.Location = new System.Drawing.Point(3, 3);
             this.groupBoxSVN.Name = "groupBoxSVN";
-            this.groupBoxSVN.Size = new System.Drawing.Size(154, 84);
+            this.groupBoxSVN.Size = new System.Drawing.Size(174, 84);
             this.groupBoxSVN.TabIndex = 0;
             this.groupBoxSVN.TabStop = false;
             this.groupBoxSVN.Text = "Lien SVN";
             // 
             // tableLayoutPanel7
             // 
-            this.tableLayoutPanel7.ColumnCount = 2;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.tableLayoutPanel7.ColumnCount = 1;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Controls.Add(this.openSvnProjet, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.label1, 1, 0);
-            this.tableLayoutPanel7.Controls.Add(this.openSvnFonction, 0, 1);
-            this.tableLayoutPanel7.Controls.Add(this.label2, 1, 1);
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel7.Controls.Add(this.toolStrip3, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.toolStrip6, 0, 1);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(0);
@@ -1366,68 +1429,52 @@
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(148, 65);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(168, 65);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
-            // openSvnProjet
+            // toolStrip3
             // 
-            this.openSvnProjet.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.openSvnProjet.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.openSvnProjet.BackColor = System.Drawing.SystemColors.Menu;
-            this.openSvnProjet.BackgroundImage = global::IHM.Properties.Resources.open;
-            this.openSvnProjet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.openSvnProjet.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.openSvnProjet.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.openSvnProjet.FlatAppearance.BorderSize = 0;
-            this.openSvnProjet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.openSvnProjet.Location = new System.Drawing.Point(8, 3);
-            this.openSvnProjet.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.openSvnProjet.Name = "openSvnProjet";
-            this.openSvnProjet.Padding = new System.Windows.Forms.Padding(5);
-            this.openSvnProjet.Size = new System.Drawing.Size(25, 25);
-            this.openSvnProjet.TabIndex = 14;
-            this.openSvnProjet.UseVisualStyleBackColor = false;
-            this.openSvnProjet.Click += new System.EventHandler(this.openSvnProjet_Click);
+            this.toolStrip3.BackColor = System.Drawing.SystemColors.Menu;
+            this.toolStrip3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.toolStrip3.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.toolStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ouvrirSvnProjet});
+            this.toolStrip3.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip3.Name = "toolStrip3";
+            this.toolStrip3.Size = new System.Drawing.Size(168, 32);
+            this.toolStrip3.TabIndex = 16;
+            this.toolStrip3.Text = "toolStrip3";
             // 
-            // label1
+            // ouvrirSvnProjet
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 13);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Ouvir SVN projet";
+            this.ouvrirSvnProjet.Image = global::IHM.Properties.Resources.open;
+            this.ouvrirSvnProjet.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ouvrirSvnProjet.Name = "ouvrirSvnProjet";
+            this.ouvrirSvnProjet.Size = new System.Drawing.Size(124, 29);
+            this.ouvrirSvnProjet.Text = "Ouvrir lien projet";
+            this.ouvrirSvnProjet.Click += new System.EventHandler(this.ouvrirSvnProjet_Click);
             // 
-            // openSvnFonction
+            // toolStrip6
             // 
-            this.openSvnFonction.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.openSvnFonction.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.openSvnFonction.BackColor = System.Drawing.SystemColors.Menu;
-            this.openSvnFonction.BackgroundImage = global::IHM.Properties.Resources.open;
-            this.openSvnFonction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.openSvnFonction.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.openSvnFonction.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.openSvnFonction.FlatAppearance.BorderSize = 0;
-            this.openSvnFonction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.openSvnFonction.Location = new System.Drawing.Point(8, 36);
-            this.openSvnFonction.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.openSvnFonction.Name = "openSvnFonction";
-            this.openSvnFonction.Padding = new System.Windows.Forms.Padding(5);
-            this.openSvnFonction.Size = new System.Drawing.Size(25, 25);
-            this.openSvnFonction.TabIndex = 15;
-            this.openSvnFonction.UseVisualStyleBackColor = false;
-            this.openSvnFonction.Click += new System.EventHandler(this.openSvnFonction_Click);
+            this.toolStrip6.BackColor = System.Drawing.SystemColors.Menu;
+            this.toolStrip6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.toolStrip6.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.toolStrip6.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ouvrirSvnFonction});
+            this.toolStrip6.Location = new System.Drawing.Point(0, 32);
+            this.toolStrip6.Name = "toolStrip6";
+            this.toolStrip6.Size = new System.Drawing.Size(168, 33);
+            this.toolStrip6.TabIndex = 17;
+            this.toolStrip6.Text = "toolStrip6";
             // 
-            // label2
+            // ouvrirSvnFonction
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(40, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 13);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Ouvir SVN fonction";
+            this.ouvrirSvnFonction.Image = global::IHM.Properties.Resources.open;
+            this.ouvrirSvnFonction.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ouvrirSvnFonction.Name = "ouvrirSvnFonction";
+            this.ouvrirSvnFonction.Size = new System.Drawing.Size(138, 30);
+            this.ouvrirSvnFonction.Text = "Ouvrir lien fonction";
+            this.ouvrirSvnFonction.Click += new System.EventHandler(this.ouvrirSvnFonction_Click);
             // 
             // tableLayoutPanel12
             // 
@@ -1949,6 +1996,48 @@
             this.toolTipFiltre.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTipFiltre.ToolTipTitle = "Recherche";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 100);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 100);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button3.BackColor = System.Drawing.SystemColors.Menu;
+            this.button3.BackgroundImage = global::IHM.Properties.Resources.add;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(8, 10);
+            this.button3.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(5);
+            this.button3.Size = new System.Drawing.Size(32, 30);
+            this.button3.TabIndex = 15;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1978,10 +2067,10 @@
             this.tableLayoutPanel8.PerformLayout();
             this.tableLayoutPanel18.ResumeLayout(false);
             this.tableLayoutPanel18.PerformLayout();
-            this.toolStrip2.ResumeLayout(false);
-            this.toolStrip2.PerformLayout();
             this.tableLayoutPanel17.ResumeLayout(false);
             this.tableLayoutPanel17.PerformLayout();
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
             this.tableLayoutPanel15.ResumeLayout(false);
             this.groupBoxDataOutput.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -1991,6 +2080,8 @@
             this.tableLayoutPanelDataInput.PerformLayout();
             this.groupBoxCritere.ResumeLayout(false);
             this.tableLayoutPanelCrit.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.tableLayoutPanelIoPhys.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -2018,6 +2109,10 @@
             this.groupBoxSVN.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
+            this.toolStrip3.ResumeLayout(false);
+            this.toolStrip3.PerformLayout();
+            this.toolStrip6.ResumeLayout(false);
+            this.toolStrip6.PerformLayout();
             this.tableLayoutPanel12.ResumeLayout(false);
             this.tableLayoutPanel12.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -2071,8 +2166,6 @@
         private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nouveauProjetToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem outilsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem outilDeCaptureToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajouterFonctionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajouterIOPhysiqueToolStripMenuItem;
@@ -2137,10 +2230,6 @@
         private System.Windows.Forms.Label labelPlageTensionInput;
         private System.Windows.Forms.GroupBox groupBoxSVN;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.Button openSvnProjet;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button openSvnFonction;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label labelDate;
         private System.Windows.Forms.Label labelResponsable;
@@ -2211,5 +2300,16 @@
         private System.Windows.Forms.ComboBox comboBoxRubrique;
         private System.Windows.Forms.ToolTip toolTipFiltre;
         private System.Windows.Forms.Button buttonFiltreShowHideL;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelIoPhys;
+        private System.Windows.Forms.Button buttonIoPhys;
+        private System.Windows.Forms.ToolStrip toolStrip3;
+        private System.Windows.Forms.ToolStripButton ouvrirSvnProjet;
+        private System.Windows.Forms.ToolStrip toolStrip6;
+        private System.Windows.Forms.ToolStripButton ouvrirSvnFonction;
+        private System.Windows.Forms.ToolStripMenuItem ouvrirUneFonctionToolStripMenuItem;
     }
 }

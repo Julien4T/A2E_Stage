@@ -75,9 +75,24 @@ namespace DAL
             // Most specific:
             catch (DbException e )
 
-            {
+            {                
+                switch (e.ErrorCode)
+                {
+                       
+                    case -2147467259:
+                        MessageBox.Show("Vous ne pouvez pas insérer ses données, la clé primaire existe déjà "
+                            , "Duplication impossible", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        break;
+                    default:
+                         MessageBox.Show("Une erreur est survenue : " + e.Message, "Erreur base de données",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                }
 
-                MessageBox.Show("Une erreur est survenue : " + e.Message, "Erreur base de données",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+                
+               
+
+               
               
                
               
@@ -85,6 +100,7 @@ namespace DAL
             // Least specific:
             catch (Exception e)
             {
+              
                 MessageBox.Show(e.Message);             
             } 
             

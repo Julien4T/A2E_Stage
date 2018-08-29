@@ -40,7 +40,7 @@ namespace BAL
             }
             else
             {    
-                critGen.designation = critGen.designation[0].ToString().ToUpper() + critGen.designation.Substring(1).ToLower();
+                //critGen.designation = critGen.designation[0].ToString().ToUpper() + critGen.designation.Substring(1).ToLower();
                 return cgd.ajouterCriGen(this.echappementCritGen(critGen));
             }        
         }
@@ -84,7 +84,7 @@ namespace BAL
             }
             else
             {
-                critGen.designation = critGen.designation[0].ToString().ToUpper() + critGen.designation.Substring(1).ToLower();
+                //critGen.designation = critGen.designation[0].ToString().ToUpper() + critGen.designation.Substring(1).ToLower();
                 return cgd.modifierCritGen(this.echappementCritGen(critGen));
             }        
         }

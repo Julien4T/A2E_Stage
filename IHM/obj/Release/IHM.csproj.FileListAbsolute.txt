@@ -31,8 +31,18 @@ C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\obj\Release\IHM.
 C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\obj\Release\IHM.exe.manifest
 C:\Users\Etudesportable\Desktop\Versionning\Code\ConnectBDD\IHM\obj\Release\IHM.application
 C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\bin\Release\IHM.exe.config
-C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\obj\Release\IHM.exe
-C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\obj\Release\IHM.pdb
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\bin\Release\IHM.exe.manifest
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\bin\Release\IHM.application
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\bin\Release\IHM.exe
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\bin\Release\IHM.pdb
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\bin\Release\BAL.dll
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\bin\Release\BEL.dll
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\bin\Release\CaptureEcran.exe
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\bin\Release\DAL.dll
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\bin\Release\BAL.pdb
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\bin\Release\CaptureEcran.pdb
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\bin\Release\DAL.pdb
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\bin\Release\BEL.pdb
 C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\obj\Release\ResolveAssemblyReference.cache
 C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\obj\Release\IHM.FenCrudCritAssocie.resources
 C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\obj\Release\IHM.FenCrudFctElect.resources
@@ -47,18 +57,8 @@ C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IH
 C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\obj\Release\IHM.Testing.resources
 C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\obj\Release\IHM.Properties.Resources.resources
 C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\obj\Release\IHM.csproj.GenerateResource.Cache
-C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\bin\Release\IHM.exe.manifest
-C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\bin\Release\IHM.application
-C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\bin\Release\IHM.exe
-C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\bin\Release\IHM.pdb
-C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\bin\Release\BAL.dll
-C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\bin\Release\BEL.dll
-C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\bin\Release\CaptureEcran.exe
-C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\bin\Release\DAL.dll
-C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\bin\Release\BAL.pdb
-C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\bin\Release\CaptureEcran.pdb
-C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\bin\Release\DAL.pdb
-C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\bin\Release\BEL.pdb
 C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\obj\Release\IHM.TrustInfo.xml
 C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\obj\Release\IHM.exe.manifest
 C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\obj\Release\IHM.application
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\obj\Release\IHM.exe
+C:\Users\Etudesportable\Documents\Application -Schema s'elect\Code\ConnectBDD\IHM\obj\Release\IHM.pdb

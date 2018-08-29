@@ -16,15 +16,19 @@ namespace IHM
         private Button button;
         private Panel panelCrit;
         private ComboBox comboBoxCrit, comboBoxSign;
-        private TextBox texBoxCrit;             
+        private TextBox texBoxCrit;
+        private Label labelUnite; 
         private List<Signe> listSigne;
+        private IhmManager ihmM = new IhmManager();
+        private IhmManager.typeFiltre tfi;
+         
 
 
-        public ControlCritere( List<CritereGenerique> listC)
+        public ControlCritere( IhmManager.typeFiltre tf, List<CritereGenerique> listC, List<IoPhysiqueGenerique> listIo)
         {
             this.Dock = DockStyle.Fill;
-            
 
+            this.tfi = tf;
 
             Signe inferieur = new Signe("≤", -1);
             Signe egal = new Signe("=", 0);
@@ -83,16 +87,25 @@ namespace IHM
 
             //Contruction du tableLayoutPanelCrit
             this.tableLayoutPanelCrit = new TableLayoutPanel();
-            this.tableLayoutPanelCrit.ColumnCount = 3;
-            this.tableLayoutPanelCrit.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
-            this.tableLayoutPanelCrit.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanelCrit.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));           
+            this.tableLayoutPanelCrit.ColumnCount = 4;
+            this.tableLayoutPanelCrit.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanelCrit.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanelCrit.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanelCrit.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));         
             this.tableLayoutPanelCrit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelCrit.Location = new System.Drawing.Point(0, 0);            
             this.tableLayoutPanelCrit.RowCount = 1;
             this.tableLayoutPanelCrit.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanelCrit.Size = new System.Drawing.Size(256, 35);
             this.tableLayoutPanelCrit.TabIndex = 0;
+
+            //Label unite
+            this.labelUnite = new Label();
+            this.labelUnite.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelUnite.AutoSize = true;
+            this.labelUnite.Location = new System.Drawing.Point(3, 16);
+            this.labelUnite.Size = new System.Drawing.Size(59, 13);
+         
 
             //Combobox crit
             this.comboBoxCrit = new ComboBox();
@@ -102,7 +115,23 @@ namespace IHM
             this.comboBoxCrit.Location = new System.Drawing.Point(3, 7);          
             this.comboBoxCrit.Size = new System.Drawing.Size(137, 21);
             this.comboBoxCrit.TabIndex = 0;
-            this.comboBoxCrit.DataSource = listC;
+            this.comboBoxCrit.SelectedIndexChanged += new System.EventHandler(this.comboBoxCrit_SelectedIndexChanged);
+
+          
+            switch (tf) 
+            { 
+                case IhmManager.typeFiltre.critere:                  
+                    this.comboBoxCrit.DataSource = listC;
+                    CritereGenerique cg = (CritereGenerique)listC[0];
+                    this.labelUnite.Text = cg.unite;
+                  
+                    break;
+                case IhmManager.typeFiltre.iophys:
+                    this.labelUnite.Text = "Qte";
+                    this.comboBoxCrit.DataSource = listIo;
+                    break;
+            }
+           
 
             //Combobox signe
             this.comboBoxSign = new ComboBox();
@@ -113,36 +142,77 @@ namespace IHM
             this.comboBoxSign.Margin = new System.Windows.Forms.Padding(0);           
             this.comboBoxSign.Size = new System.Drawing.Size(35, 21);
             this.comboBoxSign.DataSource = this.listSigne;
+ 
 
             //Textbox crit
             this.texBoxCrit = new TextBox();
             this.texBoxCrit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.texBoxCrit.Location = new System.Drawing.Point(181, 7);            
-            this.texBoxCrit.Size = new System.Drawing.Size(72, 20);           
+            this.texBoxCrit.Size = new System.Drawing.Size(72, 20);
+            this.texBoxCrit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.texBoxCrit_KeyPress);
+            
+           
 
             //Ajouter les tb et cb dans le tb           
             this.tableLayoutPanelCrit.Controls.Add(this.comboBoxCrit, 0, 0);
             this.tableLayoutPanelCrit.Controls.Add(this.comboBoxSign, 1, 0);
             this.tableLayoutPanelCrit.Controls.Add(this.texBoxCrit, 2, 0);
+            this.tableLayoutPanelCrit.Controls.Add(this.labelUnite, 3, 0);
          
             this.panelCrit.Controls.Add(this.tableLayoutPanelCrit); 
             this.Controls.Add(this.tableLayoutPanelMain);
         }
+        private void texBoxCrit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.ihmM.texteBoxFloatConstraint(this.texBoxCrit, e);
+        }
+
+
         private void button_Click(object sender, EventArgs e)
         {  
             this.Dispose();  
         }
+
+        private void comboBoxCrit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+            switch (this.tfi)
+            {
+                case IhmManager.typeFiltre.critere:
+                    CritereGenerique cg = (CritereGenerique)this.comboBoxCrit.SelectedItem;
+                    this.labelUnite.Text = cg.unite;
+                    break;
+                case IhmManager.typeFiltre.iophys:
+                    this.labelUnite.Text = "Qte";
+                    break;
+            }    
+        }
+
+
 
         public CritereRecherche getCritere() 
         {
             float valeurCrit;
 
             valeurCrit = (this.texBoxCrit.Text != "") ? float.Parse(texBoxCrit.Text.Replace(".", ",")) : CritereRecherche.valeurParDefisNull;
-            CritereRecherche c22 = new CritereRecherche();
+            //CritereRecherche c22 = new CritereRecherche();
             CritereRecherche cr = new CritereRecherche((CritereGenerique)this.comboBoxCrit.SelectedValue,
                 (Signe)this.comboBoxSign.SelectedValue, valeurCrit);
             return cr;
         }
+
+        public IoRecherche getIo()
+        {
+            int valeurIo;
+
+            valeurIo = (this.texBoxCrit.Text != "") ? int.Parse(texBoxCrit.Text.Replace(".", ",")) : CritereRecherche.valeurParDefisNull;
+            //IoRecherche io22 = new IoRecherche();
+            IoRecherche ior = new IoRecherche((IoPhysiqueGenerique)this.comboBoxCrit.SelectedValue,
+                (Signe)this.comboBoxSign.SelectedValue, valeurIo);
+            return ior;
+        }
+
+
     }
 
 

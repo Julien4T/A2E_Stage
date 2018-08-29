@@ -44,6 +44,9 @@ namespace IHM
             switch (e)
             {
                 case FenCrudFctElect.state.ajouter:
+
+                     this.fctElectronique.listCritere = new List<CritereAssociee>();
+                     this.fctElectronique.listIO = new List<IoPhysiqueAssociee>();
                     
                     this.fctElectronique.enAttente = true;
                     this.comboBoxProjet.Enabled = true;
@@ -157,14 +160,23 @@ namespace IHM
                     }
                     this.saveListCritere();
                     this.saveListIo();
+                    if (i>-1)
+                    {
+                        MessageBox.Show("La fonction a été ajoutée avec succès ! ");
+                    }
+
                     IhmManager.fctElectSelect = this.fctElectronique;
                     FenCrudFctElect.etat = state.modifier;
                     this.initialiserDonnees(FenCrudFctElect.etat);
                     break;
                 case FenCrudFctElect.state.modifier:                   
-                    this.fctManager.modifierFonction(this.fctElectronique);
+                    int j =  this.fctManager.modifierFonction(this.fctElectronique);
                     this.saveListCritere();
                     this.saveListIo();
+                      if (j>-1)
+                    {
+                        MessageBox.Show("La fonction a été modifiée avec succès ! ");
+                    }
                     break;
             }           
             return nbLigne;
@@ -365,14 +377,16 @@ namespace IHM
 
             if (IhmManager.critAssSelect != null)
             {
-                FenCrudCritAssocie form = new FenCrudCritAssocie();
-                form.ShowDialog();
-                if (FenCrudCritAssocie.critAss.critere != null)
-                {
-                    this.fctElectronique.modifierCritere(FenCrudCritAssocie.critAss);
-                    this.listBoxCrit.DataSource = null;
-                    this.listBoxCrit.DataSource = this.fctElectronique.listCritere;
-                }
+               
+                    FenCrudCritAssocie form = new FenCrudCritAssocie();
+                    form.ShowDialog();
+                    if (FenCrudCritAssocie.critAss.critere != null)
+                    {
+                        this.fctElectronique.modifierCritere(FenCrudCritAssocie.critAss);
+                        this.listBoxCrit.DataSource = null;
+                        this.listBoxCrit.DataSource = this.fctElectronique.listCritere;
+                    }
+                
             }
             else
             {
@@ -496,6 +510,11 @@ namespace IHM
                 this.ihmM.chargerSchema( CaptureEcran.FormControlePrintScreen.imageOutput, pictureBox1);   
             }            
             
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
       

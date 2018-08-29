@@ -37,8 +37,6 @@
             this.enregistrerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supprimerLaFonctionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.outilsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.outilsDeCaptureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -187,8 +185,7 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fichierToolStripMenuItem,
-            this.outilsToolStripMenuItem});
+            this.fichierToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1264, 24);
@@ -240,20 +237,6 @@
             this.quitterToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.quitterToolStripMenuItem.Text = "Quitter";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
-            // 
-            // outilsToolStripMenuItem
-            // 
-            this.outilsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.outilsDeCaptureToolStripMenuItem});
-            this.outilsToolStripMenuItem.Name = "outilsToolStripMenuItem";
-            this.outilsToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.outilsToolStripMenuItem.Text = "Outils";
-            // 
-            // outilsDeCaptureToolStripMenuItem
-            // 
-            this.outilsDeCaptureToolStripMenuItem.Name = "outilsDeCaptureToolStripMenuItem";
-            this.outilsDeCaptureToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.outilsDeCaptureToolStripMenuItem.Text = "Outil de capture";
             // 
             // statusStrip1
             // 
@@ -373,6 +356,7 @@
             // 
             this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox9.Location = new System.Drawing.Point(63, 68);
+            this.textBox9.MaxLength = 20;
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(43, 20);
             this.textBox9.TabIndex = 12;
@@ -445,6 +429,7 @@
             // 
             this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox7.Location = new System.Drawing.Point(63, 11);
+            this.textBox7.MaxLength = 20;
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(43, 20);
             this.textBox7.TabIndex = 10;
@@ -454,6 +439,7 @@
             // 
             this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox8.Location = new System.Drawing.Point(112, 11);
+            this.textBox8.MaxLength = 20;
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(43, 20);
             this.textBox8.TabIndex = 11;
@@ -463,6 +449,7 @@
             // 
             this.textBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox10.Location = new System.Drawing.Point(112, 68);
+            this.textBox10.MaxLength = 20;
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(43, 20);
             this.textBox10.TabIndex = 13;
@@ -576,6 +563,7 @@
             // 
             this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox6.Location = new System.Drawing.Point(112, 68);
+            this.textBox6.MaxLength = 20;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(43, 20);
             this.textBox6.TabIndex = 9;
@@ -585,15 +573,18 @@
             // 
             this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox3.Location = new System.Drawing.Point(63, 11);
+            this.textBox3.MaxLength = 20;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(43, 20);
             this.textBox3.TabIndex = 6;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // textBox4
             // 
             this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox4.Location = new System.Drawing.Point(112, 11);
+            this.textBox4.MaxLength = 20;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(43, 20);
             this.textBox4.TabIndex = 7;
@@ -605,6 +596,7 @@
             this.textBox5.AccessibleName = "regerg";
             this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox5.Location = new System.Drawing.Point(63, 68);
+            this.textBox5.MaxLength = 20;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(43, 20);
             this.textBox5.TabIndex = 8;
@@ -1051,8 +1043,8 @@
             this.groupBox6.TabIndex = 7;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Coût";
-            this.toolTipCout.SetToolTip(this.groupBox6, "Prix des composants + main d\'oeuvre.\r\n0 si aucun prix ");
             this.toolTipFonction.SetToolTip(this.groupBox6, "\r\n");
+            this.toolTipCout.SetToolTip(this.groupBox6, "Prix des composants + main d\'oeuvre.\r\n0 si aucun prix ");
             // 
             // tableLayoutPanel15
             // 
@@ -1086,6 +1078,7 @@
             // 
             this.textBoxCout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxCout.Location = new System.Drawing.Point(48, 9);
+            this.textBoxCout.MaxLength = 20;
             this.textBoxCout.Name = "textBoxCout";
             this.textBoxCout.Size = new System.Drawing.Size(67, 20);
             this.textBoxCout.TabIndex = 5;
@@ -1409,7 +1402,7 @@
             this.buttonValider});
             this.toolStripMain.Location = new System.Drawing.Point(3, 0);
             this.toolStripMain.Name = "toolStripMain";
-            this.toolStripMain.Size = new System.Drawing.Size(332, 32);
+            this.toolStripMain.Size = new System.Drawing.Size(363, 32);
             this.toolStripMain.TabIndex = 0;
             // 
             // buttonOpen
@@ -1639,8 +1632,6 @@
         private System.Windows.Forms.ToolStripMenuItem ouvrirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem enregistrerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem outilsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem outilsDeCaptureToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton buttonAddCrit;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripButton buttonUpdateCrit;
