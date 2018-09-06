@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,13 +14,13 @@ namespace DAL
     public class DbConnexion
     {
         private enum connexionType { MaBaseOleDb, MaBaseSqlServer, MaBaseMySql };
-        //construction liste de base de donn√©es ici pour notre projet il s'agit d'un moteur mariaDb donc chaine de connection MySql
+        //construction liste de base de donnÈes ici pour notre projet il s'agit d'un moteur mariaDb donc chaine de connection MySql
         private static connexionType bddType = connexionType.MaBaseMySql;
         private DbConnection con;
 
         public DbConnection CreateConnexion()
         {
-            //fonctoin g√©n√©rique qui ouvre la connection selon n'importa quel type de bdd (ici MySql) 
+            //fonctoin gÈnÈrique qui ouvre la connection selon n'importa quel type de bdd (ici MySql) 
 
             switch (bddType)
             {
@@ -34,9 +34,9 @@ namespace DAL
                     //construction de la chaine de connection
                     DbConnectionStringBuilder connBuilder = new DbConnectionStringBuilder();
                     connBuilder.Add("Database", "Projets_Etudes");
-                    connBuilder.Add("Data Source", "192.168.2.250");
-                    connBuilder.Add("User Id", "root_etudes");
-                    connBuilder.Add("Password", "dB24zK6c");
+                    connBuilder.Add("Data Source", "192.*.*.*");
+                    connBuilder.Add("User Id", "*****");
+                    connBuilder.Add("Password", "*****");
                     con = new MySqlConnection(connBuilder.ConnectionString);
                     break;
             }
@@ -80,11 +80,11 @@ namespace DAL
                 {
                        
                     case -2147467259:
-                        MessageBox.Show("Vous ne pouvez pas ins√©rer ses donn√©es, la cl√© primaire existe d√©j√† "
+                        MessageBox.Show("Vous ne pouvez pas insÈrer ses donnÈes, la clÈ primaire existe dÈj‡ "
                             , "Duplication impossible", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
                     default:
-                         MessageBox.Show("Une erreur est survenue : " + e.Message, "Erreur base de donn√©es",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                         MessageBox.Show("Une erreur est survenue : " + e.Message, "Erreur base de donnÈes",MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                 }
 
@@ -137,7 +137,7 @@ namespace DAL
             }
              catch (DbException e)
              {                 
-                 MessageBox.Show("Une erreur est survenue : " + e.Message, "Erreur base de donn√©es", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                 MessageBox.Show("Une erreur est survenue : " + e.Message, "Erreur base de donnÈes", MessageBoxButtons.OK, MessageBoxIcon.Error);
              }
                       
        
